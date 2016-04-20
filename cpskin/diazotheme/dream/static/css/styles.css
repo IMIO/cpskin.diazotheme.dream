@@ -60,12 +60,33 @@
 }
 
 #top-navigation-inner #navWrapper {
+    background: transparent;
     clear: none;
     height: auto !important;
 }
 
 #portal-globalnav li a {
+    background: transparent;
+    border: none;
     padding: 1.77em 1.5em;
+}
+
+#portal-globalnav li a:hover,
+#portal-globalnav li a:active,
+#portal-globalnav .activated,
+#navWrapper #portal-globalnav #portaltab-je-suis a,
+#navWrapper #portal-globalnav #portaltab-je-trouve a,
+#navWrapper #portal-globalnav #portaltab-je-suis .selected a,
+#navWrapper #portal-globalnav #portaltab-je-trouve .selected a,
+#navWrapper #portal-globalnav #portaltab-je-suis a:hover,
+#navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
+#navWrapper #portal-globalnav #portaltab-je-suis .activated,
+#navWrapper #portal-globalnav #portaltab-je-trouve .activated {
+    background-color: transparent;
+}
+
+#visual-portal-wrapper a:focus{
+    outline: none;
 }
 
 /*   FIN NAVIGATION   */
