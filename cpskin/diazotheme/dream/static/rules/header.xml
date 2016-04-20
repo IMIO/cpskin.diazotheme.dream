@@ -54,10 +54,17 @@
           </div>
           <div id="top-navigation">
             <div id="top-navigation-inner">
+              <div id="logo-nav">
+                <xsl:apply-templates select="./*[@id='portal-logo']" />
+                <xsl:apply-templates select="./*[@id='portal-globalnav']" />
+              </div>
               <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                             and @id!='portal-searchbox'
                                                             and @id!='social-viewlet'
-                                                            and @id!='portal-languageselector')]"/>
+                                                            and @id!='portal-languageselector'
+                                                            and @id!='portal-globalnav'
+                                                            and @id!='portal-logo')]"/>
+
             </div>
           </div>
           <xsl:if test="not($is_homepage)">
