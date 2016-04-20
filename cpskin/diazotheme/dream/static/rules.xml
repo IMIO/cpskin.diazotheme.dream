@@ -10,21 +10,21 @@
        Tiny, for example. -->
   <theme href="++theme++plone/index.html" css:if-content="#visual-portal-wrapper"/>
 
-  <!-- Head rules -->
+  <!-- Rules from diazotheme.frameworks -->
   <xi:include href="/++theme++plone/rules/head/ie-classes.xml"/>
   <xi:include href="/++theme++plone/rules/head/base.xml"/>
   <xi:include href="/++theme++plone/rules/head/theme.xml"/>
   <xi:include href="/++theme++plone/rules/utility/responsify.xml"/>
-  <xi:include href="/++theme++plone/rules/utility/structures.xml"/>
 
-  <!-- Cpskin theme rules -->
+  <!-- Rules from cpskin.theme -->
   <xi:include href="/++theme++cpskin.theme.base/rules/head.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/footer.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/content.xml"/>
 
-
   <!-- Our own rules -->
-  <xi:include href="/++theme++cpskin.diazotheme.dream/header.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.dream/rules/structures.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.dream/rules/header.xml"/>
+  <xi:include href="/++theme++cpskin.diazotheme.dream/rules/portlets.xml"/>
 
   <!-- Copy over the content -->
   <replace css:theme="body" css:content="body" />
