@@ -61,25 +61,21 @@
             </div>
 
           </div>
-          <xsl:if test="//body[@class[contains(., 'section-notheme')]]">
-          <!-- <xsl:if test="$ishomepage"> -->
-            <div id="top-search">
-                <div id="top-search-inner">
-                  <xsl:copy-of select="./*[@id='portal-searchbox']"/>
-                </div>
+            <xsl:if test="not($is_homepage)">
+                <div id="top-search">
+                    <div id="top-search-inner">
+                        <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+                    </div>
               </div>
-          </xsl:if>
+            </xsl:if>
       </replace>
-          <rules css:if-not-content=".section-notheme">
-          <!-- <rules css:if-not="$ishomepage"> -->
-
-              <div id="top-search">
-                <div id="top-search-inner">
-                  <xsl:copy-of select="./*[@id='portal-searchbox']"/>
-                </div>
+        <before if="$is_homepage" css:content-children="#cpskin-banner">  
+            <div id="top-search">
+              <div id="top-search-inner">
+                <xsl:copy-of select="//*[@id='portal-searchbox']"/>
               </div>
-
-          </rules>
+            </div>
+        </before>
 
       <drop css:content="#minisite-search" />
 
