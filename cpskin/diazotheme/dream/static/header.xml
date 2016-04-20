@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:css="http://namespaces.plone.org/diazo/css">
+
+  <replace css:content-children="#portaltab-index_html a">
+      <span class="icon-home" />
+  </replace>
+
+
+  <!-- Header / banner specific to minisite mode -->
+  <rules if="$isinminisitemode">
+
+      <replace css:content-children="#portal-header">
+          <div id="top-languages">
+            <xsl:copy-of select="//*[@id='portal-languageselector']" />
+          </div>
+
+          <div id="top-actions" class="minisitessss">
+            <div id="top-actions-inner" class="minisites">
+            </div>
+          </div>
+      </replace>
+
+      <replace css:content-children="#minisite-search">
+          <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+      </replace>
+
+
+      <drop css:content="#viewlet-above-content #viewlet-minisite" />
+      <drop css:content="#portal-breadcrumbs" />
+
+  </rules>
+
+
+  <!-- Standard Header / banner -->
+  <rules if-not="$isinminisitemode">
+
+      <replace css:content-children="#portal-header">
+          <div id="top-actions">
+            <div id="top-actions-inner">
+              <div id="top-actions-actions">
+                <div id="div-siteactions">
+                    <xsl:copy-of select="//*[@id='portal-siteactions']" />
+                </div>
+                <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
+                <xsl:apply-templates select="./*[@id='social-viewlet']" />
+                <div id="div-languageselector">
+                    <xsl:copy-of select="//*[@id='portal-languageselector']" />
+                </div>
+              </div>
+              <div class="visualClear"></div>
+            </div>
+          </div>
+          <div id="top-navigation">
+            <div id="top-navigation-inner">
+              <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
+                                                            and @id!='portal-searchbox'
+                                                            and @id!='social-viewlet'
+                                                            and @id!='portal-languageselector')]"/>
+            </div>
+
+          </div>
+          <xsl:if test="//body[@class[contains(., 'section-notheme')]]">
+          <!-- <xsl:if test="$ishomepage"> -->
+            <div id="top-search">
+                <div id="top-search-inner">
+                  <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+                </div>
+              </div>
+          </xsl:if>
+      </replace>
+          <rules css:if-not-content=".section-notheme">
+          <!-- <rules css:if-not="$ishomepage"> -->
+
+              <div id="top-search">
+                <div id="top-search-inner">
+                  <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+                </div>
+              </div>
+
+          </rules>
+
+      <drop css:content="#minisite-search" />
+
+  </rules>
+
+
+  <drop css:content="#portal-siteactions" />
+
+</rules>
