@@ -1,3 +1,6 @@
+body{
+    overflow: hidden;
+}
 /*   HEADER   */
 
 .hiddenStructure {
@@ -6,7 +9,11 @@
 
 .section-notheme #top-actions,
 #top-actions{
-    background-color: #16a085;
+    background-color: #007e60;
+}
+
+#portal-header{
+    position: relative;
 }
 
 #top-actions-inner {
@@ -33,6 +40,7 @@
 }
 
 #portal-languageselector{
+    background:transparent;
     max-width: 100%;
     float: none;
 }
@@ -65,15 +73,40 @@
     height: auto !important;
 }
 
+#logo-nav {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+#portal-logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#navWrapper {
+    float: right;
+    width: 85%;
+}
+
+
+#portal-globalnav {
+    margin: 1.5em 0;
+    float:left;
+}
+
 #portal-globalnav li a {
     background: transparent;
     border: none;
-    padding: 1.77em 1.5em;
 }
+
 
 #portal-globalnav li a:hover,
 #portal-globalnav li a:active,
 #portal-globalnav .activated,
+#portal-globalnav .selected a,
+#portal-globalnav .selected a:hover,
 #navWrapper #portal-globalnav #portaltab-je-suis a,
 #navWrapper #portal-globalnav #portaltab-je-trouve a,
 #navWrapper #portal-globalnav #portaltab-je-suis .selected a,
@@ -85,8 +118,74 @@
     background-color: transparent;
 }
 
+
+#portal-globalnav a::after,
+.sf-with-ul::after {
+    content: " ";
+}
+
+
 #visual-portal-wrapper a:focus{
     outline: none;
+}
+
+#portal-globalnav li a:hover::before {
+    width: calc(100% - 4px);
+}
+#portal-globalnav li a::before {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid white;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+    z-index: -1;
+}
+
+/*sous menu*/
+
+ul.navTreeLevel0{
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+ul.navTreeLevel0::before,
+ul.navTreeLevel0::after,
+.navTreeLevel1::before,
+.navTreeLevel1::after{
+    display: block;
+    width: 1000px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    bottom:0;
+}
+
+ul.navTreeLevel0::before{
+    background: #ddd;
+    right: 100%;
+}
+
+ul.navTreeLevel0::after{
+    background: #ddd;
+    left: 100%;
+}
+
+.navTreeLevel1::before{
+    background: #f2f2f2;
+    right: 100%;
+}
+
+.navTreeLevel1::after{
+    background: #f2f2f2;
+    left: 100%;
 }
 
 /*   FIN NAVIGATION   */
