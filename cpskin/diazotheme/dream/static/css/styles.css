@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    overflow: hidden;/*BFC for sub navigation*/
 }
 /*   HEADER   */
 
@@ -9,7 +9,7 @@ body{
 
 .section-notheme #top-actions,
 #top-actions{
-    background-color: #007e60;
+    background-color: transparent;
 }
 
 #portal-header{
@@ -23,6 +23,7 @@ body{
 #portal-logo {
     float: left;
     margin: 0;
+    padding-bottom: 0.5em;
 }
 
 #portal-logo > img {
@@ -53,36 +54,51 @@ body{
     transform: translate(50%, -50%);
 }
 
+#logo-languages {
+    float: left;
+    left: 0.5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#div-languageselector {
+    float: none;
+    padding-bottom: 3.2%;
+}
+
+#portal-languageselector a {
+    color:#fff;
+    padding-right: 0.3em;
+}
+
+#portal-languageselector li:last-child a {
+    padding-right: 0;
+}
+
 /*   FIN HEADER   */
 
 /*   NAVIGATION   */
 
 #top-navigation {
     background: #16a085;
-    overflow: hidden; /*BFC for div-siteactions*/
 }
 
 #top-navigation-inner {
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 #top-navigation-inner #navWrapper {
     background: transparent;
     clear: none;
     height: auto !important;
+    max-width: 1200px;
 }
 
 #logo-nav {
     float: left;
     position: relative;
-    width: 100%;
-}
-
-#portal-logo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    min-width: 80%;
 }
 
 #navWrapper {
@@ -94,13 +110,37 @@ body{
 #portal-globalnav {
     margin: 1.5em 0;
     float:left;
+    width: 100%;
 }
 
 #portal-globalnav li a {
     background: transparent;
     border: none;
+    padding: 0.77em 1.5em 0.3em;
+    position:relative;
 }
 
+#portaltab-index_html {
+    display: none;
+}
+
+#portal-globalnav li a:hover::before {
+    width: calc(100% - 4px);
+}
+
+#portal-globalnav li a::before {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid white;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
 
 #portal-globalnav li a:hover,
 #portal-globalnav li a:active,
@@ -129,28 +169,12 @@ body{
     outline: none;
 }
 
-#portal-globalnav li a:hover::before {
-    width: calc(100% - 4px);
-}
-#portal-globalnav li a::before {
-    background: transparent none repeat scroll 0 0;
-    border-bottom: 2px solid white;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: width 0.2s ease-in-out 0s;
-    width: 0;
-    z-index: -1;
-}
 
 /*sous menu*/
 
 ul.navTreeLevel0{
     margin-bottom: 0;
+    left:16%;
     position: absolute;
     width: 100%;
 }
@@ -178,6 +202,10 @@ ul.navTreeLevel0::after{
     left: 100%;
 }
 
+ul.navTreeLevel0 li a{
+    margin-bottom: 0.6em;
+}
+
 .navTreeLevel1::before{
     background: #f2f2f2;
     right: 100%;
@@ -186,6 +214,10 @@ ul.navTreeLevel0::after{
 .navTreeLevel1::after{
     background: #f2f2f2;
     left: 100%;
+}
+
+.sf-menu ul.navTreeLevel1{
+    margin-top: 0;
 }
 
 /*   FIN NAVIGATION   */
