@@ -1,6 +1,7 @@
-body{
-    overflow: hidden;/*BFC for sub navigation*/
+body #visual-portal-wrapper{
+    overflow: hidden;
 }
+
 /*   HEADER   */
 
 .hiddenStructure {
@@ -271,7 +272,7 @@ ul.portal-globalnav-cpskinmenu li a{
     padding: 0.75em 0 0.3em !important;
 }
 
-ul.portal-globalnav-cpskinmenu li a::after{
+ul.navTreeLevel0 > li > span > a:after{
     content: " ⌟";
     float: right;
     margin: -0.3em 0 0 0.5em;
@@ -315,7 +316,7 @@ li.sfHover > span > a{
 
 /*   CONTENT   */
 
-div.width-3\:4 {
+.template-folderview div.width-3\:4 {
     width: 100%;
 }
 
@@ -332,9 +333,130 @@ div.width-3\:4 {
 }
 
 .bloc-item{
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    margin: 0.75em 1.5em 0 0;
+    max-height: 500px;
+    min-height: 220px;
+    padding: 0;
     width: 22%;
+}
+
+.bigimage:nth-child(2n),
+.bloc-item:nth-child(2n) {
+    padding-left: 0;
+}
+
+.bloc-item img{
+    margin:0;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.bloc-item img:hover {
+    opacity: 0.8;
 }
 
 li.bloc-item a h3 {
     clear: left;
+    padding:2% 2% 0;
+}
+
+li.bloc-item span{
+    padding-left: 1%;
+}
+
+.bloc-collection {
+    float: left;
+    position: relative;
+}
+
+.bloc-2.bloc-collection{
+    background: #eee;
+}
+
+.bloc-2.bloc-collection::before,
+.bloc-2.bloc-collection::after{
+    display: block;
+    width: 1000px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    bottom:0;
+}
+
+.bloc-2.bloc-collection::before{
+    background: #eee;
+    right: 100%;
+}
+
+.bloc-2.bloc-collection::after{
+    background: #eee;
+    left: 100%;
+}
+#visual-portal-wrapper a.voir-tout {
+    color: #828282;
+}
+
+#visual-portal-wrapper a.voir-tout:hover {
+    color: #2980b9 !important;
+}
+
+
+/*   BOTTOM PORTLET   */
+
+
+[id="bottom-portlets"] > div {
+    border-left: 1px solid #d3d3d3;
+    display: inline-block;
+    padding-left: 0.5em;
+    vertical-align: top;
+}
+
+[id="bottom-portlets"] .managePortletsLink{
+    display: block;
+}
+
+[id="bottom-portlets"] dl.portlet{
+    margin:0;
+}
+
+[id="bottom-portlets"] p[class]{
+    margin-bottom: 0;
+}
+
+[id="bottom-portlets"] .portletHeader {
+    color: #2980b9;
+}
+
+/*   FOOTER   */
+
+#portal-footer-wrapper .row,
+#portal-footer{
+    background-color: #16a085;
+}
+
+#footer-sitemap a,
+#portal-footer p,
+#portal-footer p a{
+    color: #fff;
+}
+
+
+[id="footer-social"] {
+    position: absolute;
+    right: 16%;
+    top: 0;
+    z-index: 1;
+}
+
+
+[id="footer-social"] .social {
+    display: block;
+}
+
+[id="footer-social"] .social a{
+    color: #fff;
 }
