@@ -1,0 +1,42 @@
+/* For devices with narrow phones */
+
+/*   HEADER   */
+
+[id="logo-languages"] {
+    float: none;
+    left: 0.5%;
+    margin-top: 1%;
+    position: relative;
+    transform: none;
+}
+
+[id="top-actions"]{
+    clear: left;
+    left: 2%;
+    position: absolute;
+    top: 2%;
+}
+
+[id="logo-nav"]{
+    margin-top: 2em;
+}
+
+
+#portal-logo > img {
+    max-height: none;
+}
+
+/*   BOTTOM PORTLET   */
+
+
+[id="bottom-portlets"] > div {
+    margin-bottom: 1em;
+}
+
+/*   FOOTER   */
+
+[id="footer-social"] {
+    padding-top: 1em;
+}
+
+

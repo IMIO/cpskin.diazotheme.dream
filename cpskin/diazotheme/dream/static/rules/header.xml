@@ -39,16 +39,7 @@
       <replace css:content-children="#portal-header">
           <div id="top-navigation">
             <div id="top-navigation-inner">
-                <div id="logo-nav">
-                  <div id="logo-languages">
-                      <div id="div-languageselector">
-                          <xsl:copy-of select="//*[@id='portal-languageselector']" />
-                      </div>
-                      <xsl:apply-templates select="./*[@id='portal-logo']" />
-                  </div>
-                  <xsl:apply-templates select="./*[@id='portal-globalnav']" />
-            </div>
-                 <div id="top-actions">
+                <div id="top-actions">
                       <div id="top-actions-inner">
                           <div id="top-actions-actions">
                             <div id="div-siteactions">
@@ -59,7 +50,17 @@
                           </div>
                         <div class="visualClear"></div>
                   </div>
-                </div>  
+                </div> 
+                <div id="logo-nav">
+                  <div id="logo-languages">
+                      <div id="div-languageselector">
+                          <xsl:copy-of select="//*[@id='portal-languageselector']" />
+                      </div>
+                      <xsl:apply-templates select="./*[@id='portal-logo']" />
+                  </div>
+                  <xsl:apply-templates select="./*[@id='portal-globalnav']" />
+            </div>
+                  
               <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                             and @id!='portal-searchbox'
                                                             and @id!='social-viewlet'

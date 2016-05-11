@@ -18,7 +18,7 @@ body #visual-portal-wrapper{
 }
 
 #top-actions-inner {
-    max-width: 100%;
+    float: right;
 }
 
 #portal-logo {
@@ -233,6 +233,7 @@ ul.portal-globalnav-cpskinmenu{
     margin-bottom: 0;
     left:16%;
     position: absolute;
+    top: 100%;
     width: 100%;
 }
 
@@ -318,6 +319,10 @@ li.sfHover > span > a{
 
 .template-folderview div.width-3\:4 {
     width: 100%;
+}
+
+div.width-1\:2 {
+    width: 77.75%;
 }
 
 /*bloc news & event*/
@@ -407,6 +412,9 @@ li.bloc-item span{
 
 /*   BOTTOM PORTLET   */
 
+[id="bottom-portlets"] {
+    margin-bottom: 2em;
+}
 
 [id="bottom-portlets"] > div {
     border-left: 1px solid #d3d3d3;
@@ -459,4 +467,36 @@ li.bloc-item span{
 
 [id="footer-social"] .social a{
     color: #fff;
+}
+
+/*   menu mobile   */
+
+#mobnav-btn{
+    background: #16a085;
+    clear:left;
+}
+
+div#mobile-first-level-wrapper,
+.advb-submenu .advb-title{
+    background-color: #16a085;
+}
+
+.advb-submenu {
+    padding-left: 7px;
+}
+
+@media handheld, screen and (max-device-width: 768px), screen and (max-width: 768px){
+    
+    /*   HEADER    */
+    [id="logo-languages"] {
+    left: 0;
+    position: inherit;
+    top: 0;
+    transform: none;
+    }
+    
+    #div-languageselector{
+        float: left;
+    }
+    
 }
