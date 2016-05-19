@@ -6,8 +6,6 @@
   <replace css:content-children="#portaltab-index_html a">
       <span class="icon-home" />
   </replace>
-
-
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
 
@@ -31,12 +29,23 @@
       <drop css:content="#portal-breadcrumbs" />
 
   </rules>
+   
 
 
   <!-- Standard Header / banner -->
   <rules if-not="$isinminisitemode">
 
       <replace css:content-children="#portal-header">
+        <script type="text/javascript">
+        function openSearch()
+        {
+        var divSearch = document.getElementById('sec');
+        if (divSearch.style.display == 'none')
+        divSearch.style.display = 'block';
+        else
+        divSearch.style.display = 'none';
+        }
+        </script>
           <div id="top-navigation">
             <div id="top-navigation-inner">
                 <div id="top-actions">
@@ -59,6 +68,18 @@
                       <xsl:apply-templates select="./*[@id='portal-logo']" />
                   </div>
                   <xsl:apply-templates select="./*[@id='portal-globalnav']" />
+                  <xsl:if test="not($is_homepage)">
+                 <div id="search-nav">
+                    <ul>
+                      <li>
+                        <a href="javascript: openSearch();"  class="btn-search" onclick="open-search(this);">
+                          <span class="ico-search"></span>
+                          <span>Search</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  </xsl:if>
             </div>
                   
               <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
@@ -71,13 +92,9 @@
 
             </div>
           </div>
-          <xsl:if test="not($is_homepage)">
-            <div id="top-search">
-              <div id="top-search-inner">
-                <xsl:copy-of select="./*[@id='portal-searchbox']"/>
-              </div>
-            </div>
-          </xsl:if>
+          <div id="sec" style="display:none;">
+            <xsl:copy-of select="./*[@id='portal-searchbox']"/>
+          </div>
       </replace>
         <before if="$is_homepage" css:content-children="#cpskin-banner">
             <div id="top-search">
