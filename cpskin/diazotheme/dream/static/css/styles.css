@@ -12,7 +12,6 @@ body #visual-portal-wrapper{
 
 #portal-logo {
     margin: 0;
-    padding-bottom: 0.5em;
     max-width: 100%;
 }
 
@@ -23,8 +22,13 @@ body #visual-portal-wrapper{
 
 /*   SEARCH   */
 
-#portal-searchbox{
-    top:1.5em;
+#cpskin-banner #portal-searchbox {
+    float: none;
+    position: absolute;
+    right: 50%;
+    top: 66%;
+    transform: translate(50%, -50%);
+    width: 24%;
 }
 
 #portal-searchbox form {
@@ -43,10 +47,73 @@ body #visual-portal-wrapper{
 
 /*search icone*/
 
+[id="search-nav"] {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 0.5em;
+}
+
+[id="hidden-search"]{
+    background: #606869;
+    padding: 1em;
+}
+
+
+[id="hidden-search"] #portal-searchbox {
+    background: #fff;
+    display: block;
+    float: none;
+    margin: 0 auto;
+    max-width: 35%;
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+[id="hidden-search"] #portal-searchbox form {
+    background: transparent;
+    border-radius: 0px;
+    height: 40px;
+}
+
+[id="hidden-search"] .LSBox #searchGadget {
+    padding-right: 0;
+    width: 90%;
+}
+
+[id="hidden-search"] .LSBox .hiddenStructure{
+    margin: 0;
+}
+
+
+.ico-search::before {
+    content: "\e828";
+    font-family: fontello;
+    padding-right: 0.3em;
+}
+
+a.btn-search {
+    color: #fff;
+}
+/*   Languages and personaltools   */
+
+[id="languages-tools"] {
+    float: right;
+}
+
+#portal-personaltools-wrapper,
+#portal-languageselector{
+    float:none;
+}
+
+#portal-languageselector{
+    max-width: 100%;
+}
+
 /*   NAVIGATION   */
 
 #top-navigation-inner {
-    background: red;
+    background: #16a085;
 }
 
 #portal-header #navWrapper {
@@ -56,6 +123,55 @@ body #visual-portal-wrapper{
 #top-navigation-inner #navWrapper {
     clear: inherit;
     float: left;
+    height: auto !important;
+    min-width: 78%;
+}
+#portal-globalnav li a {
+    background: transparent;
+    padding: 1.85em 1.5em;
+}
+
+#portaltab-index_html {
+    display: none;
+}
+
+#portal-globalnav li a:hover,
+#portal-globalnav li a:active,
+#portal-globalnav .activated,
+#portal-globalnav .selected a,
+#portal-globalnav .selected a:hover,
+#navWrapper #portal-globalnav #portaltab-je-suis a,
+#navWrapper #portal-globalnav #portaltab-je-trouve a,
+#navWrapper #portal-globalnav #portaltab-je-suis .selected a,
+#navWrapper #portal-globalnav #portaltab-je-trouve .selected a,
+#navWrapper #portal-globalnav #portaltab-je-suis a:hover,
+#navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
+#navWrapper #portal-globalnav #portaltab-je-suis .activated,
+#navWrapper #portal-globalnav #portaltab-je-trouve .activated {
+    background-color: transparent;
+}
+
+portal-globalnav a::after,
+.sf-with-ul::after {
+    content: " ";
+}
+
+
+#visual-portal-wrapper a:focus{
+    outline: none;
+}
+
+#portal-globalnav .selected a:hover{
+    color:#fff;
+}
+
+/*   sub menu   */
+
+ul.navTreeLevel0 {
+    margin:0;
+    position: absolute;
+    top:100%;
+    width: 100%;
 }
 
 /*   BANNER   */
