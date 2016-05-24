@@ -12,7 +12,7 @@
  
  <stylesheet title="cpskin.diazotheme.dream mobile style"
     id="++theme++cpskin.diazotheme.dream/css/mobile-dream.css"
-    media="handheld, screen and (max-device-width: 480px), screen and (max-width: 480px)"
+    media="all"
     rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression="request/HTTP_X_THEME_ENABLED | nothing"

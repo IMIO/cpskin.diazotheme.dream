@@ -29,23 +29,11 @@
       <drop css:content="#portal-breadcrumbs" />
 
   </rules>
-   
-
 
   <!-- Standard Header / banner -->
   <rules if-not="$isinminisitemode">
 
       <replace css:content-children="#portal-header">
-        <script type="text/javascript">
-        function openSearch()
-        {
-        var divSearch = document.getElementById('sec');
-        if (divSearch.style.display == 'none')
-        divSearch.style.display = 'block';
-        else
-        divSearch.style.display = 'none';
-        }
-        </script>
           <div id="top-navigation">
             <div id="top-navigation-inner">
                 <div id="top-actions">
@@ -54,48 +42,54 @@
                             <div id="div-siteactions">
                                 <xsl:copy-of select="//*[@id='portal-siteactions']" />
                             </div>
-                            <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
                             <xsl:apply-templates select="./*[@id='social-viewlet']" />
                           </div>
                         <div class="visualClear"></div>
                   </div>
                 </div> 
-                <div id="logo-nav">
-                  <div id="logo-languages">
-                      <div id="div-languageselector">
-                          <xsl:copy-of select="//*[@id='portal-languageselector']" />
-                      </div>
-                      <xsl:apply-templates select="./*[@id='portal-logo']" />
-                  </div>
-                  <xsl:apply-templates select="./*[@id='portal-globalnav']" />
-                  <xsl:if test="not($is_homepage)">
-                 <div id="search-nav">
-                    <ul>
-                      <li>
-                        <a href="javascript: openSearch();"  class="btn-search" onclick="open-search(this);">
-                          <span class="ico-search"></span>
-                          <span>Search</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  </xsl:if>
-            </div>
+                <div id="top-logo">
+                    <xsl:apply-templates select="./*[@id='portal-logo']" /> 
+                </div>
+                <xsl:apply-templates select="./*[@id='portal-globalnav']" />
+                <div id="languages-tools">
+                    <xsl:copy-of select="./*[@id='portal-languageselector']" />
+                    <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
+                </div>
                   
               <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'
                                                             and @id!='portal-searchbox'
                                                             and @id!='social-viewlet'
-                                                            and @id!='portal-languageselector'
                                                             and @id!='portal-globalnav'
+                                                            and @id!='portal-languageselector'
                                                             and @id!='portal-logo')]"/>
               
 
             </div>
           </div>
-          <div id="sec" style="display:none;">
+          <div id="hidden-search" style="display:none;">
             <xsl:copy-of select="./*[@id='portal-searchbox']"/>
           </div>
+          <script>
+            // jquery for search button
+           $( ".btn-search" ).click(function() {
+             $( "#hidden-search" ).slideToggle(
+             "fast",
+             function () {
+                    $("#searchGadget").focus();
+                });
+             });
+        </script>
       </replace>
+       <after css:content="#portal-globalnav li:last-child">
+         <xsl:if test="not($is_homepage)">
+            <li>
+                 <a href="#"  class="btn-search">
+                    <span class="ico-search"></span>
+                    <span>Search</span>
+                </a>
+            </li>             
+         </xsl:if>
+      </after>
         <before if="$is_homepage" css:content-children="#cpskin-banner">
             <div id="top-search">
               <div id="top-search-inner">

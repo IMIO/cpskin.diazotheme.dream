@@ -4,25 +4,13 @@ body #visual-portal-wrapper{
 
 /*   HEADER   */
 
-.hiddenStructure {
-    height: 0;
-}
-
-.section-notheme #top-actions,
-#top-actions{
-    background-color: transparent;
-}
-
-#portal-header{
-    position: relative;
-}
-
-#top-actions-inner {
-    float: right;
+/*logo*/
+[id="top-logo"] {
+    float:left;
+    width: 15%;
 }
 
 #portal-logo {
-    float: left;
     margin: 0;
     padding-bottom: 0.5em;
     max-width: 100%;
@@ -33,49 +21,7 @@ body #visual-portal-wrapper{
     width: 100%;
 }
 
-#portal-top #cpskin-banner, #portal-top #cpskin-banner img {
-    margin: 0;
-    max-width: 100%;
-}
-
-#div-siteactions,
-#div-languageselector{
-    float: left;
-}
-
-#portal-languageselector{
-    background:transparent;
-    max-width: 100%;
-    float: none;
-}
-
-#cpskin-banner #portal-searchbox {
-    float: none;
-    position: absolute;
-    right: 50%;
-    top: 66%;
-    transform: translate(50%, -50%);
-}
-
-[id="logo-languages"] {
-    float: left;
-    margin-left: 0.5em;
-    max-width: 15%;
-}
-
-#div-languageselector {
-    float: none;
-    padding-bottom: 3.2%;
-}
-
-#portal-languageselector a {
-    color:#fff;
-    padding-right: 0.3em;
-}
-
-#portal-languageselector li:last-child a {
-    padding-right: 0;
-}
+/*   SEARCH   */
 
 #portal-searchbox{
     top:1.5em;
@@ -88,235 +34,36 @@ body #visual-portal-wrapper{
 
 .LSBox #searchGadget{
     border-radius: 4px 0 0 4px;
+    width: 21em;
 }
 
-/*   NAVIGATION   */
-
-#top-navigation {
-    background: #16a085;
-}
-
-#top-navigation-inner {
-    margin: 0 auto;
-}
-
-#top-navigation-inner #navWrapper {
-    background: transparent;
-    clear: none;
-    height: auto !important;
-    max-width: 1200px;
-    position: absolute;
-    transform: translate(50%, -50%);
-    top: 50%;
-    right: 33%;
-}
-
-[id="logo-nav"] {
-    float: left;
-    position: relative;
-    min-width: 80%;
-}
-
-#navWrapper {
-    float: left;
-    width: 85%;
-}
-
-
-#portal-globalnav {
-    margin: 1.5em 0;
-    float:left;
-    width: 100%;
-}
-
-#portal-globalnav li a {
-    background: transparent;
-    border: none;
-    margin-left: 1.5em;
-    padding: 0.77em 0 0.3em;
-    position:relative;
-}
-
-#portaltab-index_html {
-    display: none;
-}
-
-#portal-globalnav li a:hover,
-#portal-globalnav li a:active,
-#portal-globalnav .activated,
-#portal-globalnav .selected a,
-#portal-globalnav .selected a:hover,
-#navWrapper #portal-globalnav #portaltab-je-suis a,
-#navWrapper #portal-globalnav #portaltab-je-trouve a,
-#navWrapper #portal-globalnav #portaltab-je-suis .selected a,
-#navWrapper #portal-globalnav #portaltab-je-trouve .selected a,
-#navWrapper #portal-globalnav #portaltab-je-suis a:hover,
-#navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
-#navWrapper #portal-globalnav #portaltab-je-suis .activated,
-#navWrapper #portal-globalnav #portaltab-je-trouve .activated {
-    background-color: transparent;
-}
-
-
-#portal-globalnav li a:hover::before{
-    width: 100%;
-}
-
-#portal-globalnav li a::before{
-    background: transparent none repeat scroll 0 0;
-    border-bottom: 2px solid #fff;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: width 0.2s ease-in-out 0s;
-    width: 0;
-}
-
-#portal-globalnav a::after,
-.sf-with-ul::after {
-    content: " ";
-}
-
-
-#visual-portal-wrapper a:focus{
+.LSBox input:focus{
     outline: none;
 }
 
-#portal-globalnav .activated{
-    border-bottom: 2px solid #fff;
+/*search icone*/
+
+/*   NAVIGATION   */
+
+#top-navigation-inner {
+    background: red;
 }
 
-#portal-globalnav .selected a:hover{
-    color:#fff;
+#portal-header #navWrapper {
+    background-color: transparent;
 }
 
-/*sub menu*/
-
-.portal-globalnav-cpskinmenu a:hover,
-.portal-globalnav-cpskinmenu-tabs a:hover,
-li.sfHover > span > a{
-    background:transparent;
-    color:#fff;
-}
-
-.portal-globalnav-cpskinmenu .selected a,
-.portal-globalnav-cpskinmenu-tabs .selected a,
-.portal-globalnav-cpskinmenu .navTreeItemInPath > span a {
-    border-bottom: 2px dotted #fff;
-    text-decoration: none;
-}
-
-.portal-globalnav-cpskinmenu a{
-    position: relative;
-}
-
-.portal-globalnav-cpskinmenu a:hover::before{
-    width: 100%;
-}
-
-.portal-globalnav-cpskinmenu a::before{
-    background: transparent none repeat scroll 0 0;
-    border-bottom: 2px solid #fff;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: width 0.2s ease-in-out 0s;
-    width: 0;
-}
-
-ul.portal-globalnav-cpskinmenu{
-    background: rgba(22, 160, 133, 0.8);
-    margin-bottom: 0;
-    left:16%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-}
-
-.portal-globalnav-cpskinmenu.navTreeLevel0::before,
-.portal-globalnav-cpskinmenu.navTreeLevel0::after,
-.portal-globalnav-cpskinmenu.no_direct_access::before,
-.portal-globalnav-cpskinmenu.no_direct_access::after,
-.portal-globalnav-cpskinmenu.has_direct_access::before,
-.portal-globalnav-cpskinmenu.has_direct_access::after{
-    display: block;
-    width: 1000px;
-    content: "";
-    position: absolute;
-    height: 100%;
-    top:0;
-    bottom:0;
-}
-
-.portal-globalnav-cpskinmenu.navTreeLevel0::before,
-.portal-globalnav-cpskinmenu.no_direct_access::before,
-.portal-globalnav-cpskinmenu.has_direct_access::before{
-    background: rgba(22, 160, 133, 0.8);
-    right: 100%;
-}
-
-.portal-globalnav-cpskinmenu.navTreeLevel0::after,
-.portal-globalnav-cpskinmenu.no_direct_access::after,
-.portal-globalnav-cpskinmenu.has_direct_access::after{
-    background: rgba(22, 160, 133, 0.8);
-    left: 100%;
-}
-
-ul.portal-globalnav-cpskinmenu li a{
-    color:#fff;
+#top-navigation-inner #navWrapper {
+    clear: inherit;
     float: left;
-    margin: 0em 0 0.6em 0.75em;
-    padding: 0.75em 0 0.3em !important;
 }
 
-ul.navTreeLevel0 > li > span > a:after{
-    content: " ⌟";
-    float: right;
-    margin: -0.3em 0 0 0.5em;
-    transform: rotate(45deg);
-}
+/*   BANNER   */
 
-li.sfHover > span > a{
-    color:#fff;
-}
-
-.sf-menu ul.navTreeLevel1{
-    background: rgba(22, 160, 133, 0.8) !important;
-}
-
-.sf-menu ul.navTreeLevel1{
-    margin-top: 0;
-}
-
-/*acces direct*/
-
-.sf-menu ul.navTreeLevel1.direct_access {
-    background: rgba(255, 255, 255, 0) !important;
-}
-.sf-menu .direct_access li a {
-    padding-left: 1.2em !important;
-    padding-top: 0 !important;
-}
-
-.sf-menu .direct_access li a::before{
-    border-bottom: transparent;
-    display: inline;
-}
-
-.sf-menu .direct_access li a:hover::before{
-    border-bottom: 2px solid #fff;
-}
-
-.sf-menu .direct_access li a::after{
-    content: "";
+#portal-top #cpskin-banner,
+#portal-top #cpskin-banner img {
+    margin: 0;
+    max-width: 100%;
 }
 
 /*   CONTENT   */
@@ -435,6 +182,7 @@ li.bloc-item span{
     margin:0;
 }
 
+/* for style of ckeditortemplate*/
 [id="bottom-portlets"] p[class]{
     margin-bottom: 0;
 }
@@ -458,6 +206,8 @@ li.bloc-item span{
 
 #footer-sitemap div.footer-static{
     color: #fff;
+    float: right;
+    margin-right: 2em;
 }
 
 [id="footer-social"] {
@@ -476,6 +226,10 @@ li.bloc-item span{
     color: #fff;
 }
 
+.social a::before {
+    margin-bottom: 0.75em;
+}
+
 /*   menu mobile   */
 
 #mobnav-btn{
@@ -492,69 +246,6 @@ div#mobile-first-level-wrapper,
     padding-left: 7px;
 }
 
-@media handheld, screen and (max-device-width: 768px), screen and (max-width: 768px){
-    
-    /*   HEADER    */
-    [id="logo-languages"] {
-    left: 0;
-    position: inherit;
-    top: 0;
-    transform: none;
-    }
-    
-    #div-languageselector{
-        float: left;
-    }
-    
-}
-
-/*search icone*/
-
-[id="search-nav"] {
-    float: right;
-}
-
-[id="sec"]{
-    background: #606869;
-    padding: 1em;
-}
-
-[id="sec"] #portal-searchbox {
-    background: #fff;
-    display: block;
-    float: none;
-    margin: 0 auto;
-    max-width: 35%;
-    position: relative;
-    right: 0;
-    top: 0;
-}
-
-[id="sec"] #portal-searchbox form {
-    background: transparent;
-    border-radius: 0px;
-    height: 40px;
-}
-
-[id="sec"] .LSBox #searchGadget {
-    padding-right: 0;
-    width: 90%;
-}
-
-[id="sec"] .LSBox .hiddenStructure{
-    margin: 0;
-}
-
-
-.ico-search::before {
-    content: "\e828";
-    font-family: fontello;
-    padding-right: 0.3em;
-}
-
-a.btn-search {
-    color: #fff;
-}
 
 
 

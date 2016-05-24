@@ -1,48 +1,110 @@
 /* For devices with narrow phones */
-
-/*   HEADER   */
-
-[id="logo-languages"] {
-    float: none;
-    left: 0.5%;
-    margin-top: 1%;
-    position: relative;
-    transform: none;
+@media handheld, screen and (max-device-width: 480px), screen and (max-width: 480px){
+    
+    /*   HEADER   */
+    
+    [id="logo-languages"] {
+        float: none;
+        left: 0.5%;
+        margin-top: 1%;
+        position: relative;
+        transform: none;
+        max-width: 100%;
+    }
+    
+    [id="top-actions"]{
+        clear: left;
+        left: 2%;
+        position: absolute;
+        top: 2%;
+    }
+    
+    [id="logo-nav"]{
+        margin-top: 2em;
+    }
+    
+    #logo-nav #portal-logo{
+        margin:1em 0em 0em 0em;
+    }
+    
+    #portal-logo > img {
+        max-height: none;
+    }
+    
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+        box-shadow: none;
+    }
+    
+    .btn-search{
+        display:none;
+    }
+    
+    /*   BOTTOM PORTLET   */
+    
+    [id="bottom-portlets"] > div {
+        margin-bottom: 1em;
+    }
+    
+    /*   FOOTER   */
+    
+    [id="footer-social"] {
+        padding-top: 1em;
+    }
+    
+    #footer-sitemap div.footer-static{
+        float: left;
+    }
 }
 
-[id="top-actions"]{
-    clear: left;
-    left: 2%;
-    position: absolute;
-    top: 2%;
+/* For devices with narrow tablet */
+@media handheld, screen and (max-device-width: 768px), screen and (max-width: 768px){
+    
+    /*   HEADER    */
+    
+    [id="logo-languages"] {
+        left: 0;
+        position: inherit;
+        top: 0;
+        transform: none;
+    }
+    
+    #div-languageselector{
+        float: left;
+    }
+    
+    /*   CONTENT   */
+    
+    #portal-column-content {
+        float: right;
+    }
+    
+    #portal-column-one{
+        float: left;
+    }
+    
+    /*   FOOTER   */
+    
+    #footer-sitemap div.footer-static{
+        float: left;
+    }
+    
+    [id="footer-social"]{
+        right: 0;
+    }
+    
+    [id="footer-social"] .social {
+        display: inline;
+    }
+    
+    .social a::before {
+        margin-top: 0.5em;
+    }
+    
+    #footer-sitemap div.footer-static {
+        float: right;
+        margin-right: 1em;
+    }
 }
-
-[id="logo-nav"]{
-    margin-top: 2em;
-}
-
-
-#portal-logo > img {
-    max-height: none;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-    box-shadow: none;
-}
-
-/*   BOTTOM PORTLET   */
-
-
-[id="bottom-portlets"] > div {
-    margin-bottom: 1em;
-}
-
-/*   FOOTER   */
-
-[id="footer-social"] {
-    padding-top: 1em;
-}
-
 
