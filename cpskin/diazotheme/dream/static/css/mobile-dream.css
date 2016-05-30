@@ -7,11 +7,20 @@
         width: 100%;
     }
     
+    [id="languages-tools"] {
+        float: left;
+        padding: 0.5em;
+    }
+    
     [id="top-actions"]{
         clear: left;
         left: 2%;
         position: absolute;
         top: 2%;
+    }
+    
+    .LSBox #searchGadget{
+        width: 13em;
     }
     
     [id="logo-nav"]{
@@ -53,7 +62,7 @@
     }
 }
 
-/* For devices with narrow tablet */
+/* FOR DEVICES WITH NARROW TABLET */
 @media handheld, screen and (max-device-width: 768px), screen and (max-width: 768px){
     
     /*   HEADER    */
@@ -83,23 +92,16 @@
     
     #footer-sitemap div.footer-static{
         float: left;
+        margin-right: 0;
     }
     
     [id="footer-social"]{
         right: 0;
     }
     
-    [id="footer-social"] .social {
-        display: inline;
-    }
-    
     .social a::before {
         margin-top: 0.5em;
     }
     
-    #footer-sitemap div.footer-static {
-        float: right;
-        margin-right: 1em;
-    }
 }
 
