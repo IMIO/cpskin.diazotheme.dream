@@ -167,12 +167,130 @@ portal-globalnav a::after,
 
 /*   sub menu   */
 
-ul.navTreeLevel0 {
+.portal-globalnav-cpskinmenu.navTreeLevel0 {
+    background: rgba(22, 160, 133, 0.8);
     margin:0;
     position: absolute;
     top:100%;
     width: 100%;
+    left:50%;
+    transform: translateX(-50%); /*permets de laisser la position absolute et de centre par rapport au menu*/
 }
+
+.portal-globalnav-cpskinmenu a:hover,
+.portal-globalnav-cpskinmenu-tabs a:hover,
+li.sfHover > span > a{
+    background:transparent;
+    color:#fff;
+}
+
+.portal-globalnav-cpskinmenu .selected a,
+.portal-globalnav-cpskinmenu-tabs .selected a,
+.portal-globalnav-cpskinmenu .navTreeItemInPath > span a {
+    border-bottom: 2px dotted #fff;
+    text-decoration: none;
+}
+
+.portal-globalnav-cpskinmenu a{
+    position: relative;
+}
+
+.portal-globalnav-cpskinmenu a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
+
+.portal-globalnav-cpskinmenu a:hover::before{
+    width: 100%;
+}
+
+.portal-globalnav-cpskinmenu.navTreeLevel0::before,
+.portal-globalnav-cpskinmenu.navTreeLevel0::after,
+.portal-globalnav-cpskinmenu.no_direct_access::before,
+.portal-globalnav-cpskinmenu.no_direct_access::after,
+.portal-globalnav-cpskinmenu.has_direct_access::before,
+.portal-globalnav-cpskinmenu.has_direct_access::after{
+    display: block;
+    width: 1000px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    bottom:0;
+}
+
+.portal-globalnav-cpskinmenu.navTreeLevel0::before,
+.portal-globalnav-cpskinmenu.no_direct_access::before,
+.portal-globalnav-cpskinmenu.has_direct_access::before{
+    background: rgba(22, 160, 133, 0.8);
+    right: 100%;
+}
+
+.portal-globalnav-cpskinmenu.navTreeLevel0::after,
+.portal-globalnav-cpskinmenu.no_direct_access::after,
+.portal-globalnav-cpskinmenu.has_direct_access::after{
+    background: rgba(22, 160, 133, 0.8);
+    left: 100%;
+}
+
+ul.portal-globalnav-cpskinmenu li a{
+    color:#fff;
+    float: left;
+    margin: 0em 0 0.6em 0.75em;
+    padding: 0.75em 0 0.3em !important;
+}
+
+ul.navTreeLevel0 > li > span > a:after{
+    content: " ⌟";
+    float: right;
+    margin: -0.3em 0 0 0.5em;
+    transform: rotate(45deg);
+}
+
+li.sfHover > span > a{
+    color:#fff;
+}
+
+.sf-menu ul.navTreeLevel1{
+    background: rgba(22, 160, 133, 0.8) !important;
+}
+
+.sf-menu ul.navTreeLevel1{
+    margin-top: 0;
+}
+
+/*acces direct*/
+
+.sf-menu ul.navTreeLevel1.direct_access {
+    background: rgba(255, 255, 255, 0) !important;
+}
+.sf-menu .direct_access li a {
+    padding-left: 1.2em !important;
+    padding-top: 0 !important;
+}
+
+.sf-menu .direct_access li a::before{
+    border-bottom: transparent;
+    display: inline;
+}
+
+.sf-menu .direct_access li a:hover::before{
+    border-bottom: 2px solid #fff;
+}
+
+.sf-menu .direct_access li a::after{
+    content: "";
+}
+
 
 /*   BANNER   */
 

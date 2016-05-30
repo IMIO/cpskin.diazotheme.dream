@@ -3,13 +3,8 @@
     
     /*   HEADER   */
     
-    [id="logo-languages"] {
-        float: none;
-        left: 0.5%;
-        margin-top: 1%;
-        position: relative;
-        transform: none;
-        max-width: 100%;
+    [id="top-logo"] {
+        width: 100%;
     }
     
     [id="top-actions"]{
