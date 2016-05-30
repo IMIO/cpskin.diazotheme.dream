@@ -18,6 +18,7 @@ body #visual-portal-wrapper{
 #portal-logo > img {
     height: auto;
     width: 100%;
+    max-width:200px;
 }
 
 /*   SEARCH   */
@@ -98,7 +99,9 @@ a.btn-search {
 /*   Languages and personaltools   */
 
 [id="languages-tools"] {
-    float: right;
+    background: #e67e22;
+    float: left;
+    width: 15%;
 }
 
 #portal-personaltools-wrapper,
@@ -112,23 +115,23 @@ a.btn-search {
 
 /*   NAVIGATION   */
 
-#top-navigation-inner {
+#top-navigation-inner{
     background: #16a085;
 }
 
 #portal-header #navWrapper {
-    background-color: transparent;
+    background: transparent;
 }
 
 #top-navigation-inner #navWrapper {
     clear: inherit;
     float: left;
     height: auto !important;
-    min-width: 78%;
+    width: 70%;
 }
 #portal-globalnav li a {
     background: transparent;
-    padding: 1.85em 1.5em;
+    padding: 1.85% 1.5%;
 }
 
 #portaltab-index_html {

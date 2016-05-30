@@ -78,7 +78,7 @@
                     $("#searchGadget").focus();
                 });
              });
-        </script>
+            </script>
       </replace>
        <after css:content="#portal-globalnav li:last-child">
          <xsl:if test="not($is_homepage)">
