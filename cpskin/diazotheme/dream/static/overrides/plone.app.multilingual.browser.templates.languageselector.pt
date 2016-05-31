@@ -13,7 +13,7 @@
            tal:define="name lang/native|lang/name;"
            tal:attributes="href lang/url;
                            title name">
-            <tal:block replace="code">language code</tal:block>
+            <tal:block replace="python: code.capitalize()">language code</tal:block>
         </a>
     </li>
     </tal:language>

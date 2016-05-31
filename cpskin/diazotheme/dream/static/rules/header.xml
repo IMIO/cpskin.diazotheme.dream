@@ -48,12 +48,18 @@
                   </div>
                 </div> 
                 <div id="top-logo">
-                    <xsl:apply-templates select="./*[@id='portal-logo']" /> 
+                    <div id="top-logo-inner">
+                        <xsl:apply-templates select="./*[@id='portal-logo']" />
+                    </div>
+                     
                 </div>
                 <xsl:apply-templates select="./*[@id='portal-globalnav']" />
                 <div id="languages-tools">
-                    <xsl:copy-of select="./*[@id='portal-languageselector']" />
-                    <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
+                    <div id="languages-tools-inner">
+                        <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
+                        <xsl:copy-of select="./*[@id='portal-languageselector']" />
+                    </div>
+                    
                 </div>
                   
               <xsl:apply-templates select="./*[not(@id) or (@id!='portal-personaltools-wrapper'

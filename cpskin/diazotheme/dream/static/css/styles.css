@@ -2,12 +2,22 @@ body #visual-portal-wrapper{
     overflow: hidden;
 }
 
+.hiddenStructure{
+    width: 0;
+}
+
 /*   HEADER   */
 
 /*logo*/
+
 [id="top-logo"] {
-    float:left;
+    display: table-cell;
+    vertical-align: middle;
     width: 15%;
+}
+
+[id="top-logo-inner"]{
+    padding-left:1em;
 }
 
 #portal-logo {
@@ -86,7 +96,6 @@ body #visual-portal-wrapper{
     margin: 0;
 }
 
-
 .ico-search::before {
     content: "\e828";
     font-family: fontello;
@@ -100,23 +109,54 @@ a.btn-search {
 
 [id="languages-tools"] {
     background: #e67e22;
-    float: left;
-    width: 15%;
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 1em;
+    width: 12%;
 }
 
-#portal-personaltools-wrapper,
-#portal-languageselector{
-    float:none;
+[id="languages-tools-inner"]{
+    float: right;
 }
 
 #portal-languageselector{
-    max-width: 100%;
+    background: transparent;
+    padding: 0;
+}
+
+#portal-personaltools-wrapper {
+    margin-right: 1em;
+}
+
+#portal-personaltools{
+    margin-left:0;
+}
+
+#languages-tools-inner a {
+    color: #fff;
+    padding-right: 0.5em;
+}
+
+#languages-tools-inner li:last-child a{
+    padding-right: 0;
+}
+
+#top-actions {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.section-notheme #top-actions {
+    background-color: transparent;
 }
 
 /*   NAVIGATION   */
 
 #top-navigation-inner{
     background: #16a085;
+    display: table;
+    width: 100%;
 }
 
 #portal-header #navWrapper {
@@ -125,13 +165,18 @@ a.btn-search {
 
 #top-navigation-inner #navWrapper {
     clear: inherit;
-    float: left;
+    display: table-cell;
     height: auto !important;
-    width: 70%;
+    vertical-align: middle;
+    width: 73%;
 }
 #portal-globalnav li a {
     background: transparent;
     padding: 1.85% 1.5%;
+}
+
+#portal-globalnav a::after, .sf-with-ul::after{
+    content: none;
 }
 
 #portaltab-index_html {
@@ -166,6 +211,21 @@ portal-globalnav a::after,
 
 #portal-globalnav .selected a:hover{
     color:#fff;
+}
+
+/*   Je suis je trouve and search   */
+
+#portaltab-je-suis > a::before {
+    content: "\e816";
+    font-family: fontello;
+    padding-right: 0.3em;
+}
+
+#portaltab-je-trouve > a::before {
+    content: "\e82d";
+    font-family: fontello;
+    font-size: 110%;
+    padding-right: 0.3em;
 }
 
 /*   sub menu   */
