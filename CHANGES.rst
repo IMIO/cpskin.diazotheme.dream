@@ -5,4 +5,5 @@ Changelog
 0.1 (unreleased)
 ----------------
 
-- Initial release.
+- Override language selector template.
+  [bsuttor]
