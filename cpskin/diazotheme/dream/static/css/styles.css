@@ -11,6 +11,7 @@ body #visual-portal-wrapper{
 /*logo*/
 
 [id="top-logo"] {
+    background: #3f5765;
     display: table-cell;
     vertical-align: middle;
     width: 15%;
@@ -65,7 +66,7 @@ body #visual-portal-wrapper{
 }
 
 [id="hidden-search"]{
-    background: #606869;
+    background: #c9c9c9;
     padding: 1em;
 }
 
@@ -84,7 +85,6 @@ body #visual-portal-wrapper{
 [id="hidden-search"] #portal-searchbox form {
     background: transparent;
     border-radius: 0px;
-    height: 40px;
 }
 
 [id="hidden-search"] .LSBox #searchGadget {
@@ -108,19 +108,38 @@ a.btn-search {
 /*   Languages and personaltools   */
 
 [id="languages-tools"] {
-    background: #e67e22;
+    background: #4e6674;
     display: table-cell;
     vertical-align: middle;
     padding-right: 1em;
+    position: relative;
     width: 12%;
+}
+
+[id="languages-tools"]::after {
+    background: #4e6674;
+    bottom: 0;
+    content: " ";
+    height: 100%;
+    left: 100%;
+    position: absolute;
+    width: 1000px;
 }
 
 [id="languages-tools-inner"]{
     float: right;
 }
 
+#div-siteactions {
+    box-sizing: border-box;
+    padding-left: 0.8em;
+    position: absolute;
+    top: 0;
+}
+
 #portal-languageselector{
     background: transparent;
+    max-width: 100%;
     padding: 0;
 }
 
@@ -134,29 +153,22 @@ a.btn-search {
 
 #languages-tools-inner a {
     color: #fff;
-    padding-right: 0.5em;
+    padding-right: 0.25em;
 }
 
 #languages-tools-inner li:last-child a{
     padding-right: 0;
 }
 
-#top-actions {
-    background-color: transparent;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.section-notheme #top-actions {
-    background-color: transparent;
-}
-
 /*   NAVIGATION   */
+[id="top-navigation"]{
+    background: #3f5765;
+}
 
 #top-navigation-inner{
-    background: #16a085;
     display: table;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
 #portal-header #navWrapper {
@@ -173,6 +185,7 @@ a.btn-search {
 #portal-globalnav li a {
     background: transparent;
     padding: 1.85% 1.5%;
+    position: relative;
 }
 
 #portal-globalnav a::after, .sf-with-ul::after{
@@ -199,7 +212,19 @@ a.btn-search {
     background-color: transparent;
 }
 
-portal-globalnav a::after,
+#portal-globalnav li a:hover::after{
+    width: 100%;
+}
+
+#portal-globalnav li a::after{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+    content: "";
+    display: block;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
+
 .sf-with-ul::after {
     content: " ";
 }
@@ -215,10 +240,14 @@ portal-globalnav a::after,
 
 /*   Je suis je trouve and search   */
 
+#portal-globalnav #portaltab-je-suis a {
+    padding-left: 3.5em;
+}
+
 #portaltab-je-suis > a::before {
     content: "\e816";
     font-family: fontello;
-    padding-right: 0.3em;
+    padding-right: 0.4em;
 }
 
 #portaltab-je-trouve > a::before {
@@ -228,10 +257,11 @@ portal-globalnav a::after,
     padding-right: 0.3em;
 }
 
+
 /*   sub menu   */
 
 .portal-globalnav-cpskinmenu.navTreeLevel0 {
-    background: rgba(22, 160, 133, 0.8);
+    background: rgba(63, 87, 101, 0.8);
     margin:0;
     position: absolute;
     top:100%;
@@ -294,14 +324,14 @@ li.sfHover > span > a{
 .portal-globalnav-cpskinmenu.navTreeLevel0::before,
 .portal-globalnav-cpskinmenu.no_direct_access::before,
 .portal-globalnav-cpskinmenu.has_direct_access::before{
-    background: rgba(22, 160, 133, 0.8);
+    background: rgba(63, 87, 101 ,0.8);
     right: 100%;
 }
 
 .portal-globalnav-cpskinmenu.navTreeLevel0::after,
 .portal-globalnav-cpskinmenu.no_direct_access::after,
 .portal-globalnav-cpskinmenu.has_direct_access::after{
-    background: rgba(22, 160, 133, 0.8);
+    background: rgba(63, 87, 101, 0.8);
     left: 100%;
 }
 
@@ -324,7 +354,7 @@ li.sfHover > span > a{
 }
 
 .sf-menu ul.navTreeLevel1{
-    background: rgba(22, 160, 133, 0.8) !important;
+    background: rgba(63, 87, 101, 0.8) !important;
 }
 
 .sf-menu ul.navTreeLevel1{
@@ -423,6 +453,7 @@ li.bloc-item span{
 .bloc-collection {
     float: left;
     position: relative;
+    width: 100%;
 }
 
 .bloc-2.bloc-collection{
@@ -492,7 +523,7 @@ li.bloc-item span{
 
 #portal-footer-wrapper .row,
 #portal-footer{
-    background-color: #16a085;
+    background-color: #3f5765;
 }
 
 #footer-sitemap a,
@@ -530,13 +561,13 @@ li.bloc-item span{
 /*   menu mobile   */
 
 #mobnav-btn{
-    background: #16a085;
+    background: #3f5765;
     clear:left;
 }
 
 div#mobile-first-level-wrapper,
 .advb-submenu .advb-title{
-    background-color: #16a085;
+    background-color: #3f5765;
 }
 
 .advb-submenu {

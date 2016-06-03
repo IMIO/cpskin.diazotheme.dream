@@ -3,36 +3,41 @@
     
     /*   HEADER   */
     
+    #top-navigation-inner{
+        display: block;
+    }
+    
     [id="top-logo"] {
+        width: 70%;
+    }
+    
+    #top-logo #portal-logo{
+        margin: 0;
+     }
+    
+    [id="languages-tools-inner"]{
         width: 100%;
     }
     
-    [id="languages-tools"] {
-        float: left;
-        padding: 0.5em;
-    }
-    
-    [id="top-actions"]{
-        clear: left;
-        left: 2%;
-        position: absolute;
-        top: 2%;
+    #portal-header #portal-searchbox{
+        width: 150%;
     }
     
     .LSBox #searchGadget{
         width: 13em;
     }
     
-    [id="logo-nav"]{
-        margin-top: 2em;
-    }
-    
-    #logo-nav #portal-logo{
-        margin:1em 0em 0em 0em;
-    }
-    
     #portal-logo > img {
         max-height: none;
+    }
+    
+    #div-siteactions{
+        position: relative;
+    }
+    
+    #portal-languageselector{
+        box-sizing: border-box;
+        padding: 0 0.2em 0.3em 0;
     }
     
     input[type="text"]:focus,
@@ -43,6 +48,13 @@
     
     .btn-search{
         display:none;
+    }
+    
+    /*   NAVIGATION   */
+    
+    #mobnav-btn,
+    #portal-header #search-btn{
+        clear: left;
     }
     
     /*   BOTTOM PORTLET   */
