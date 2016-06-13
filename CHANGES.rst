@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-0.1 (unreleased)
-----------------
+0.1.1 (2016-06-13)
+------------------
 
 - Override language selector template.
   [bsuttor]
