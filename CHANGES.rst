@@ -5,7 +5,8 @@ Changelog
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix buildout to always avoid released version of cpskin.diazotheme.dream
+  [laulaz]
 
 
 0.1.1 (2016-06-13)
