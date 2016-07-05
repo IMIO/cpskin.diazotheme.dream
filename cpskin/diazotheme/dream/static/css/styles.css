@@ -128,6 +128,7 @@ a.btn-search {
 
 [id="languages-tools-inner"]{
     float: right;
+    padding-top: 0.5em;
 }
 
 #div-siteactions {
@@ -355,10 +356,8 @@ li.sfHover > span > a{
 
 .sf-menu ul.navTreeLevel1{
     background: rgba(63, 87, 101, 0.8) !important;
-}
-
-.sf-menu ul.navTreeLevel1{
-    margin-top: 0;
+    box-shadow: none;
+    margin-top: 0;   
 }
 
 /*acces direct*/
