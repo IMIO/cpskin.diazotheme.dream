@@ -487,6 +487,11 @@ li.bloc-item span{
     color: #2980b9 !important;
 }
 
+/*   LEFT PORTLET   */
+
+.template-folderview [id="portal-column-one"] {
+    margin-left:-121%;
+}
 
 /*   BOTTOM PORTLET   */
 
@@ -573,6 +578,23 @@ div#mobile-first-level-wrapper,
     padding-left: 7px;
 }
 
+/*   menu minisite   */
 
+#container-minisite-globalnav {
+    background-color: #56858b;
+    box-sizing: border-box;
+    display: block;
+    padding: 1%
+}
 
+#container-minisite-globalnav ul {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#minisite-globalnav a {
+    color: white;
+    display: inline-block;
+    margin: 1%;
+}
 

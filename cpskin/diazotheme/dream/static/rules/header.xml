@@ -8,7 +8,6 @@
   </replace>
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
-
       <replace css:content-children="#portal-header">
           <div id="top-languages">
             <xsl:copy-of select="//*[@id='portal-languageselector']" />
@@ -19,14 +18,17 @@
             </div>
           </div>
       </replace>
-
-      <replace css:content-children="#minisite-search">
-          <xsl:copy-of select="//*[@id='portal-searchbox']"/>
-      </replace>
-
-
+      <before if="($is_search_in_banner)" css:content-children="#cpskin-banner">
+            <div id="top-search">
+              <div id="top-search-inner">
+                <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+              </div>
+            </div>
+           
+        </before>
       <drop css:content="#viewlet-above-content #viewlet-minisite" />
       <drop css:content="#portal-breadcrumbs" />
+      <drop css:content="#minisite-searchs" />
 
   </rules>
 
@@ -88,8 +90,7 @@
       <drop css:content="#minisite-search" />
 
   </rules>
-
-
+  
   <drop css:content="#portal-siteactions" />
 
 </rules>
