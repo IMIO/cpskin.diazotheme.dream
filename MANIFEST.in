@@ -5,4 +5,5 @@ include *.rst
 include *.txt
 include *.in
 include *.cfg
+exclude Makefile
 global-exclude *.pyc
