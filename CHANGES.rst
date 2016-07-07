@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.2 (unreleased)
+0.1.2 (2016-07-07)
 ------------------
 
 - Fix buildout to always avoid released version of cpskin.diazotheme.dream
