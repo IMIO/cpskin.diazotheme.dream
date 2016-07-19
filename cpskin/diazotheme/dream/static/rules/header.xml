@@ -9,7 +9,6 @@
   <before css:content="#portal-top">
      <xsl:copy-of select="//*[@id='messagesviewlet']" />
   </before>
- 
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
       <replace css:content-children="#portal-header">

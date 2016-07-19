@@ -162,6 +162,7 @@ a.btn-search {
 }
 
 /*   NAVIGATION   */
+
 [id="top-navigation"]{
     background: #3f5765;
 }
@@ -174,6 +175,7 @@ a.btn-search {
 
 #portal-header #navWrapper {
     background: transparent;
+    padding-left: 4%;
 }
 
 #top-navigation-inner #navWrapper {
@@ -226,10 +228,12 @@ a.btn-search {
     width: 0;
 }
 
-.sf-with-ul::after {
-    content: " ";
+.sf-with-ul::after{
+    content: " ⌟";
+    float: right;
+    margin: -0.3em 0 0 0.5em;
+    transform: rotate(45deg);
 }
-
 
 #visual-portal-wrapper a:focus{
     outline: none;
@@ -281,8 +285,12 @@ li.sfHover > span > a{
 .portal-globalnav-cpskinmenu .selected a,
 .portal-globalnav-cpskinmenu-tabs .selected a,
 .portal-globalnav-cpskinmenu .navTreeItemInPath > span a {
-    border-bottom: 2px dotted #fff;
     text-decoration: none;
+}
+
+.portal-globalnav-cpskinmenu .selected a,
+.portal-globalnav-cpskinmenu-tabs .selected a{
+    border-bottom: 2px dotted #fff;
 }
 
 .portal-globalnav-cpskinmenu a{
@@ -322,18 +330,32 @@ li.sfHover > span > a{
     bottom:0;
 }
 
-.portal-globalnav-cpskinmenu.navTreeLevel0::before,
-.portal-globalnav-cpskinmenu.no_direct_access::before,
-.portal-globalnav-cpskinmenu.has_direct_access::before{
+.portal-globalnav-cpskinmenu.navTreeLevel0::before{
     background: rgba(63, 87, 101 ,0.8);
     right: 100%;
 }
 
-.portal-globalnav-cpskinmenu.navTreeLevel0::after,
-.portal-globalnav-cpskinmenu.no_direct_access::after,
-.portal-globalnav-cpskinmenu.has_direct_access::after{
+.portal-globalnav-cpskinmenu.navTreeLevel0::after{
     background: rgba(63, 87, 101, 0.8);
     left: 100%;
+}
+
+
+.portal-globalnav-cpskinmenu.no_direct_access::before,
+.portal-globalnav-cpskinmenu.has_direct_access::before{
+    background: rgba(106, 118, 124, 0.8);
+    right: 100%;
+}
+
+
+.portal-globalnav-cpskinmenu.no_direct_access::after,
+.portal-globalnav-cpskinmenu.has_direct_access::after{
+    background: rgba(106, 118, 124, 0.8);
+    left: 100%;
+}
+
+.sf-menu ul.portal-globalnav-cpskinmenu.navTreeLevel1{
+    background: rgba(106, 118, 124, 0.8) !important;
 }
 
 ul.portal-globalnav-cpskinmenu li a{
@@ -341,13 +363,6 @@ ul.portal-globalnav-cpskinmenu li a{
     float: left;
     margin: 0em 0 0.6em 0.75em;
     padding: 0.75em 0 0.3em !important;
-}
-
-ul.navTreeLevel0 > li > span > a:after{
-    content: " ⌟";
-    float: right;
-    margin: -0.3em 0 0 0.5em;
-    transform: rotate(45deg);
 }
 
 li.sfHover > span > a{
@@ -597,4 +612,6 @@ div#mobile-first-level-wrapper,
     display: inline-block;
     margin: 1%;
 }
+
+
 
