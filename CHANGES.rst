@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-0.1.3.dev0 (unreleased)
--------------------
+0.1.3 (2016-07-20)
+------------------
 
 - Change css for navigation
   [mgennart]
