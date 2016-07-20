@@ -5,7 +5,8 @@ Changelog
 [5;7~ (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Change css for navigation
+  [mgennart]
 
 
 0.1.2 (2016-07-07)
