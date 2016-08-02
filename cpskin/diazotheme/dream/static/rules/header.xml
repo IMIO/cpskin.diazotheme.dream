@@ -9,6 +9,9 @@
   <before css:content="#portal-top">
      <xsl:copy-of select="//*[@id='messagesviewlet']" />
   </before>
+  <before css:content-children="#container-minisite-globalnav">
+     <xsl:copy-of select="//*[@id='minisite-logo']" />
+  </before>
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
       <replace css:content-children="#portal-header">
@@ -96,5 +99,6 @@
   
   <drop css:content="#portal-siteactions" />
   <drop css:content="#messagesviewlet" />
+  <drop css:content="#minisite-logo" />
   
 </rules>
