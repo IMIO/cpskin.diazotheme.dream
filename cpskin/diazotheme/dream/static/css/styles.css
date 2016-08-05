@@ -623,7 +623,7 @@ div#mobile-first-level-wrapper,
 [id="minisite-logo-nav"] {
     display: table;
     margin: 0 auto;
-    width: 1355px;
+    max-width: 1355px;
 }
 
 /*   logo minisite  */
