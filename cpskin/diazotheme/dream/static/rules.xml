@@ -20,6 +20,7 @@
   <xi:include href="/++theme++cpskin.theme.base/rules/head.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/footer.xml"/>
   <xi:include href="/++theme++cpskin.theme.base/rules/content.xml"/>
+  <xi:include href="/++theme++cpskin.theme.base/rules/login.xml"/>
 
   <!-- Our own rules -->
   <xi:include href="/++theme++cpskin.diazotheme.dream/rules/structures.xml"/>

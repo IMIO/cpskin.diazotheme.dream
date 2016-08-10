@@ -5,7 +5,8 @@ Changelog
 0.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Include login theme rule.
+  [bsuttor]
 
 
 0.1.3 (2016-07-20)
