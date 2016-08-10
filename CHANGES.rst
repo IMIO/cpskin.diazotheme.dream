@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.4 (unreleased)
+0.1.4 (2016-08-10)
 ------------------
 
 - Include login theme rule.
