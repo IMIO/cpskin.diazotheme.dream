@@ -5,7 +5,8 @@ Changelog
 0.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update mobile and minisite css.
+  [mgennart]
 
 
 0.1.4 (2016-08-10)
