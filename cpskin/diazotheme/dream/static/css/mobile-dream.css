@@ -57,6 +57,12 @@
         clear: left;
     }
     
+    /*   ZONE MULTIMEDIA   */
+    
+    .albums-container {
+        margin-left: 0;
+    }
+    
     /*   BOTTOM PORTLET   */
     
     [id="bottom-portlets"] > div {
@@ -71,6 +77,17 @@
     
     #footer-sitemap div.footer-static{
         float: left;
+    }
+    
+    /* MINISITE   */
+    
+    [id="minisite-logo-nav"],
+    [id="minisite-navigation-inner"] #minisite-logo{
+        display: block;
+    }
+    
+    #container-minisite-globalnav ul {
+        display: inline-block;
     }
 }
 
