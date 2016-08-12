@@ -116,15 +116,14 @@ a.btn-search {
     width: 12%;
 }
 
-/*[id="languages-tools"]::after*/
-/*#top-navigation-inner ::after*/
+
 #top-navigation-inner::after {
     background: #4e6674 none repeat scroll 0 0;
     bottom: 0;
     content: " ";
     display: block;
     height: 100%;
-    left: 100%;
+    left: 99%;
     position: absolute;
     top: 0;
     width: 1000px;
