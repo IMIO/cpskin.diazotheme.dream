@@ -7,8 +7,13 @@
       <span class="icon-home" />
   </replace>
   <before css:content="#portal-top">
-     <xsl:copy-of select="//*[@id='messagesviewlet']" />
-  </before>  
+    <xsl:copy-of select="//*[@id='messagesviewlet']" />
+  </before>
+  <after css:content-children="#portal-top > div">
+    <div id="portal-breadcrumbs-inner">
+        <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
+    </div>
+  </after>
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
       <replace css:content-children="#portal-header">
@@ -96,11 +101,13 @@
   
   <drop css:content="#portal-siteactions" />
   <drop css:content="#messagesviewlet" />
-   <drop css:content="#minisite-globalnav" />
+  <drop css:content="#minisite-globalnav" />
+  <drop css:content="#portal-breadcrumbs" />
     
-    <!-- Logo to mini site horizontal navigation-->
+    <!-- Logo to minisite horizontal navigation and minisite action-->
     <rules if="$ms_horizontal_navigation">
         <before css:content-children="#container-minisite-globalnav">
+            <xsl:copy-of select="//*[@id='minisite-actions']" />
             <div id="minisite-navigation-inner">
                 <div id="minisite-logo-nav">
                     <xsl:copy-of select="//*[@id='minisite-logo']" />
@@ -109,6 +116,7 @@
             </div>   
         </before>
         <drop css:content="#minisite-logo" />
+        <drop css:content="#minisite-actions" />
     </rules>
   
 </rules>
