@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.6 (unreleased)
+0.1.6 (2016-08-22)
 ------------------
 
-- Nothing changed yet.
+- Update action ministe.
+  [mgennart]
 
 
 0.1.5 (2016-08-12)
