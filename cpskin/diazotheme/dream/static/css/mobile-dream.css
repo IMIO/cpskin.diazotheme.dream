@@ -134,3 +134,28 @@
     
 }
 
+/* FOR DEVICES WITH NARROW DESKTOP */
+@media handheld, screen and (min-device-width: 1024px), screen and (min-width: 1024px){
+    
+    .bloc-2.bloc-collection::before,
+    .bloc-2.bloc-collection::after{
+        display: block;
+        width: 1000px;
+        content: "";
+        position: absolute;
+        height: 100%;
+        top:0;
+        bottom:0;
+    }   
+
+    .bloc-2.bloc-collection::before{
+        background: #eee;
+        right: 100%;
+    }
+
+    .bloc-2.bloc-collection::after{
+        background: #eee;
+        left: 100%;
+    }
+}
+
