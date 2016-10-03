@@ -2,10 +2,10 @@ Changelog
 =========
 
 
-0.1.8 (unreleased)
+0.1.8 (2016-10-03)
 ------------------
 
-- Nothing changed yet.
+- Add button move to top.
 
 
 0.1.7 (2016-08-23)
