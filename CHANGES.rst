@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Add button move to top.
+  [mgennart]
 
 
 0.1.7 (2016-08-23)
