@@ -682,9 +682,11 @@ div#mobile-first-level-wrapper,
 /*  MOVE TO TOP  */
 
 #scroll-to-top {
-    position: fixed;
     bottom: 30px;
-    right: 30px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    width: 40px;
     z-index: 1;
 }
 
@@ -692,14 +694,11 @@ div#mobile-first-level-wrapper,
     background: #e86256 url("../images/cd-top-arrow.svg") no-repeat scroll center center;
     color: transparent;
     display: block;
-    height: 40px;
-    left: 20px;
+    height: 100%;
     opacity: 0.7;
     position: relative;
-    right: 0;
     text-decoration: none;
-    visibility: visible;
-    width: 40px;
+    width: 100%;
 }
 
 #scroll-to-top a:hover {
