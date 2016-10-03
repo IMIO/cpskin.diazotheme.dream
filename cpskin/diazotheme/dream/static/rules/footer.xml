@@ -4,7 +4,6 @@
        xmlns:css="http://namespaces.plone.org/diazo/css">
 
   <rules if-not="$isinminisitemode">
-
       <after css:content="#footer-sitemap">
           <div id="footer-social">
               <xsl:copy-of select="//*[@id='social-viewlet']" />
@@ -14,6 +13,7 @@
       <drop css:content="#social-viewlet" />
 
   </rules>
+  
 
 
 </rules>

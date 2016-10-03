@@ -5,4 +5,8 @@
                 cacheable="True" compression="safe" cookable="True"
                 enabled="True" expression="" inline="False"
                 />
+    <javascript id="++theme++cpskin.diazotheme.dream/js/movetotop.js"
+                cacheable="True" compression="safe" cookable="True"
+                enabled="True" expression="" inline="False"
+                />
 </object>
