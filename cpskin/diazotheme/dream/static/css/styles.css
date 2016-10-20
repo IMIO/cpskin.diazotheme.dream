@@ -708,12 +708,14 @@ div#mobile-first-level-wrapper,
 
 /*   STICKY NAVIGATION   */
 
-#portal-globalnav li a{
+#portal-globalnav li a,
+#minisite-globalnav li a{
     transition: padding 2s ease 0s;
 }
 
-#portal-logo > img{
-    transition: padding 2s ease 0s;
+#portal-logo > img,
+#minisite-logo img{
+    transition: width 2s ease 0s;
 }
 
 .nav-is-stuck #top-navigation,
@@ -734,13 +736,20 @@ div#mobile-first-level-wrapper,
     top: 0;
 }
 
-.nav-is-stuck #portal-logo > img{
+.nav-is-stuck #portal-logo > img,
+.nav-is-stuck #minisite-logo img{
     width: 62%;
     transition: padding 2s ease 0s;
 }
 
-.nav-is-stuck #portal-globalnav li a {
+.nav-is-stuck #portal-globalnav li a{
     font-size: 120%;
+    padding-bottom: 0;
+    padding-top: 0;
+    transition: padding 2s ease 0s;
+}
+
+.nav-is-Substuck #minisite-globalnav li a{
     padding-bottom: 0;
     padding-top: 0;
     transition: padding 2s ease 0s;
