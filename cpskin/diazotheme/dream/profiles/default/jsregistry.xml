@@ -11,4 +11,9 @@
                 enabled="True" expression="" inline="False"
                 insert-after="++theme++cpskin.diazotheme.dream/js/slidetoggle-search.js"
                 />
+    <javascript id="++theme++cpskin.diazotheme.dream/js/sticky-navigation.js"
+                cacheable="True" compression="safe" cookable="True"
+                enabled="True" expression="" inline="False"
+                insert-after="++theme++cpskin.diazotheme.dream/js/movetotop.js"
+                />
 </object>

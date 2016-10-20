@@ -705,3 +705,55 @@ div#mobile-first-level-wrapper,
     opacity: 1;
 }
 
+
+/*   STICKY NAVIGATION   */
+
+#portal-globalnav li a{
+    transition: padding 2s ease 0s;
+}
+
+#portal-logo > img{
+    transition: padding 2s ease 0s;
+}
+
+.nav-is-stuck #top-navigation,
+.nav-is-Substuck #container-minisite-globalnav{
+    animation: 0.3s ease 0s normal none 1 running stickAnim;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.nav-is-Substuck #container-minisite-globalnav{
+    top:2em;
+}
+
+.nav-is-stuck #top-navigation{
+    top: 0;
+}
+
+.nav-is-stuck #portal-logo > img{
+    width: 62%;
+    transition: padding 2s ease 0s;
+}
+
+.nav-is-stuck #portal-globalnav li a {
+    font-size: 120%;
+    padding-bottom: 0;
+    padding-top: 0;
+    transition: padding 2s ease 0s;
+}
+
+.nav-is-stuck #languages-tools-inner a {
+    font-size: 80%;
+}
+
+.nav-is-Substuck.nav-is-stuck #top-navigation {
+    position: inherit;
+}
+
+.nav-is-Substuck #minisite-actions > ul::before{
+    background-color: rgba(0,0,0,1);
+}

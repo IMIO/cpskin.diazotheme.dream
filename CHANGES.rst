@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.9 (unreleased)
+0.1.9 (20-10-2016)
 ------------------
 
-- Nothing changed yet.
+- Add Sticky navigation and change position minisite action.
+  [mgennart]
 
 
 0.1.8 (2016-10-03)

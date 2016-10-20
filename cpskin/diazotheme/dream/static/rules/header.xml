@@ -107,10 +107,10 @@
     <!-- Logo to minisite horizontal navigation and minisite action-->
     <rules if="$ms_horizontal_navigation">
         <before css:content-children="#container-minisite-globalnav">
+            <xsl:copy-of select="//*[@id='minisite-actions']" />
             <div id="minisite-navigation-inner">
                 <div id="minisite-logo-nav">
                     <xsl:copy-of select="//*[@id='minisite-logo']" />
-                    <xsl:copy-of select="//*[@id='minisite-actions']" />
                     <xsl:copy-of select="//*[@id='minisite-globalnav']" />
                 </div> 
             </div>   
