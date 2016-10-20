@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.9 (20-10-2016)
+0.1.9 (2016-10-20)
 ------------------
 
 - Add Sticky navigation and change position minisite action.
