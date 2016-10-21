@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var el_html = d.documentElement,
 		el_body = d.getElementsByTagName('body')[0],
 		header = d.getElementById('top-navigation'),
+		banner = d.getElementById('cpskin-banner'),
 		menuIsStuck = function(triggerElement) {
 			var _scrollTop	= w.pageYOffset || el_body.scrollTop,
 				regexp		= /(nav\-is\-stuck)/i,
@@ -11,18 +12,18 @@ $(document).ready(function(){
 				bodyRect	= el_body.getBoundingClientRect(),
 				scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 100,
 				scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
+			if (window.matchMedia("(min-width: 1024px)").matches){
+				// if scroll down is 100 or more and nav-is-stuck class doesn't exist
+				if ( _scrollTop > scrollValFix && !classFound ) {
+					el_html.className = el_html.className + ' nav-is-stuck';
+				}
 
-			// if scroll down is 700 or more and nav-is-stuck class doesn't exist
-			if ( _scrollTop > scrollValFix && !classFound ) {
-				el_html.className = el_html.className + ' nav-is-stuck';
-				el_body.style.paddingTop = navHeight + 'px';
+				// if nav-is-stuck class exists
+				if ( _scrollTop <= 2 && classFound ) {
+					el_html.className = el_html.className.replace( regexp, '' );
+				}
 			}
-
-			// if we are to high in the page and nav-is-stuck class exists
-			if ( _scrollTop <= 2 && classFound ) {
-				el_html.className = el_html.className.replace( regexp, '' );
-				el_body.style.paddingTop = '0px';
-			}
+			
 			
 		},
 		
@@ -36,17 +37,16 @@ $(document).ready(function(){
 				
 				scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
 				
-			if (d.getElementById('container-minisite-globalnav')) {
-                // if scroll down is 700 or more and nav-is-stuck class doesn't exist
+			if (d.getElementById('container-minisite-globalnav')&& window.matchMedia("(min-width: 1024px)").matches) {
+				
+                // if scroll down is 100 or more and nav-is-Substuck class doesn't exist
 				if ( _scrollTop > scrollValFix && !classFound ) {
 					el_html.className = el_html.className + ' nav-is-Substuck';
-					el_body.style.paddingTop = navHeight + 'px';
 				}
 
-				// if we are to high in the page and nav-is-stuck class exists
+				// if nav-is-Substuck class exists
 				if ( _scrollTop <= 2 && classFound ) {
 					el_html.className = el_html.className.replace( regexp, '' );
-					el_body.style.paddingTop = '0px';
 				}
             }
 			

@@ -708,19 +708,19 @@ div#mobile-first-level-wrapper,
 
 /*   STICKY NAVIGATION   */
 
+
 #portal-globalnav li a,
 #minisite-globalnav li a{
-    transition: padding 2s ease 0s;
+    transition: padding 1s ease 0s;
 }
 
 #portal-logo > img,
 #minisite-logo img{
-    transition: width 2s ease 0s;
+    transition: width 1s ease 0s;
 }
 
 .nav-is-stuck #top-navigation,
 .nav-is-Substuck #container-minisite-globalnav{
-    animation: 0.3s ease 0s normal none 1 running stickAnim;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     left: 0;
     position: fixed;
@@ -739,20 +739,20 @@ div#mobile-first-level-wrapper,
 .nav-is-stuck #portal-logo > img,
 .nav-is-stuck #minisite-logo img{
     width: 62%;
-    transition: padding 2s ease 0s;
+    transition: padding 1s ease 0s;
 }
 
 .nav-is-stuck #portal-globalnav li a{
     font-size: 120%;
     padding-bottom: 0;
     padding-top: 0;
-    transition: padding 2s ease 0s;
+    transition: padding 1s ease 0s;
 }
 
 .nav-is-Substuck #minisite-globalnav li a{
     padding-bottom: 0;
     padding-top: 0;
-    transition: padding 2s ease 0s;
+    transition: padding 1s ease 0s;
 }
 
 .nav-is-stuck #languages-tools-inner a {
