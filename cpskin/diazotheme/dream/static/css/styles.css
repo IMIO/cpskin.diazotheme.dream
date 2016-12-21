@@ -57,6 +57,14 @@ body #visual-portal-wrapper{
     outline: none;
 }
 
+.visible-search{
+    visibility: hidden;
+}
+
+.nav-is-stuck .visible-search{
+    visibility: visible;
+}
+
 /*search icone*/
 
 [id="search-nav"] {
@@ -578,7 +586,6 @@ li.bloc-item span{
     z-index: 1;
 }
 
-
 [id="footer-social"] .social {
     display: block;
 }
@@ -719,11 +726,15 @@ div#mobile-first-level-wrapper,
     transition: width 1s ease 0s;
 }
 
+.nav-is-stuck #portal-header{
+    position: fixed;
+    width: 100%;
+}
+
 .nav-is-stuck #top-navigation,
 .nav-is-Substuck #container-minisite-globalnav{
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     left: 0;
-    position: fixed;
     right: 0;
     top: 0;
 }
@@ -765,4 +776,8 @@ div#mobile-first-level-wrapper,
 
 .nav-is-Substuck #minisite-actions > ul::before{
     background-color: rgba(0,0,0,1);
+}
+
+.nav-is-stuck #hidden-search {
+    position: relative;
 }
