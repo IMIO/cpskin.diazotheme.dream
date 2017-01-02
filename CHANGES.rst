@@ -5,7 +5,8 @@ Changelog
 0.1.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Add min-width for responsive to Sticky navigation.
+  [mgennart]
 
 
 0.1.9 (2016-10-20)
