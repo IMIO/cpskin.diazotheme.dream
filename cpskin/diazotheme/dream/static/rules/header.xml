@@ -91,9 +91,18 @@
               <div id="top-search-inner">
                 <xsl:copy-of select="//*[@id='portal-searchbox']"/>
               </div>
-            </div>
-           
+            </div> 
         </before>
+        <after css:content="#portal-globalnav li:last-child">
+         <xsl:if test="($is_search_in_banner)">
+            <li class="visible-search">
+                 <a href="#"  class="btn-search">
+                    <span class="ico-search"></span>
+                    <span>Chercher</span>
+                </a>
+            </li>             
+         </xsl:if>
+      </after> 
 
       <drop css:content="#minisite-search" />
 
