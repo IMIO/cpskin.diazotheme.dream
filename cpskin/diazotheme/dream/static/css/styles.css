@@ -41,6 +41,7 @@ body #visual-portal-wrapper{
     top: 66%;
     transform: translate(50%, -50%);
     width: 24%;
+    z-index: 1;
 }
 
 #portal-searchbox form {
@@ -439,6 +440,7 @@ div.width-1\:2 {
     width: 77.75%;
 }
 
+
 /*bloc news & event*/
 
 .titre-rss,
@@ -561,6 +563,7 @@ li.bloc-item span{
 }
 
 /*   FOOTER   */
+
 
 #portal-footer-wrapper .row,
 #portal-footer{
