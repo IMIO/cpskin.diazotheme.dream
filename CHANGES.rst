@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.10 (2017-01-02)
+0.1.10 (2017-01-25)
 -------------------
 
 - Add min-width for responsive to Sticky navigation.
