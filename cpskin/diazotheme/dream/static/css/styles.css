@@ -461,12 +461,17 @@ div.width-1\:2 {
     max-height: 500px;
     min-height: 220px;
     padding: 0;
-    width: 22%;
+    width: 23.3%;
 }
 
 .bigimage:nth-child(2n),
 .bloc-item:nth-child(2n) {
     padding-left: 0;
+}
+
+.bigimage:nth-child(4n),
+.bloc-item:nth-child(4n) {
+    margin-right: 0;
 }
 
 .bloc-item img{
@@ -617,6 +622,8 @@ div#mobile-first-level-wrapper,
     padding-left: 7px;
 }
 
+/*   MINI SITE   */
+
 /*   Navigation minisite   */
 
 #container-minisite-globalnav {
@@ -731,6 +738,7 @@ div#mobile-first-level-wrapper,
 
 .nav-is-stuck #portal-header{
     position: fixed;
+    top:0;
     width: 100%;
 }
 
@@ -743,6 +751,12 @@ div#mobile-first-level-wrapper,
 }
 
 .nav-is-Substuck #container-minisite-globalnav{
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+.nav-is-stuck.nav-is-Substuck #container-minisite-globalnav{
     top:2em;
 }
 
@@ -773,9 +787,6 @@ div#mobile-first-level-wrapper,
     font-size: 80%;
 }
 
-.nav-is-Substuck.nav-is-stuck #top-navigation {
-    position: inherit;
-}
 
 .nav-is-Substuck #minisite-actions > ul::before{
     background-color: rgba(0,0,0,1);

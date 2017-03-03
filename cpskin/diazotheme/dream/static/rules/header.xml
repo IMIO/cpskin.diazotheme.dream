@@ -42,9 +42,7 @@
 
   <!-- Standard Header / banner -->
   <rules if-not="$isinminisitemode">
-
       <replace css:content-children="#portal-header">
-        
           <div id="top-navigation">
             <div id="top-navigation-inner">
                 <div id="top-logo">
@@ -69,7 +67,8 @@
                                                             and @id!='portal-searchbox'
                                                             and @id!='portal-globalnav'
                                                             and @id!='portal-languageselector'
-                                                            and @id!='portal-logo')]"/>
+                                                            and @id!='portal-logo'
+                                                            and @id!='messagesviewlet')]"/>
             </div>
           </div>
           <div id="hidden-search" style="display:none;">
@@ -103,15 +102,14 @@
             </li>             
          </xsl:if>
       </after> 
-
+      
       <drop css:content="#minisite-search" />
-
   </rules>
   
   <drop css:content="#portal-siteactions" />
-  <drop css:content="#messagesviewlet" />
   <drop css:content="#minisite-globalnav" />
   <drop css:content="#portal-breadcrumbs" />
+  
     
     <!-- Logo to minisite horizontal navigation and minisite action-->
     <rules if="$ms_horizontal_navigation">
