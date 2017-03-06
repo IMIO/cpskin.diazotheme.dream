@@ -1,36 +1,35 @@
 $(document).ready(function(){ 
 (function(w,d,undefined){
 	var el_html = d.documentElement,
-		el_body = d.getElementsByTagName('body')[0],		
+		el_body = d.getElementsByTagName('body')[0],
+		header = d.getElementById('top-navigation'),
 		header_miniSite = d.getElementById('container-minisite-globalnav'),
 		lastScroll = w.pageYOffset || el_body.scrollTop;
-	var header = d.getElementById('top-navigation');
+		MinilastScroll = w.pageYOffset || el_body.scrollTop;
 	
-		menuIsStuck = function(triggerElement) {
-			var _scrollTop	= w.pageYOffset || el_body.scrollTop,
-				regexp		= /(nav\-is\-stuck)/i,
+		menuIsStuck = function(triggerElement, wScrollTop, lastScroll) {
+			var regexp		= /(nav\-is\-stuck)/i,
 				classFound	= el_html.className.match( regexp ),
 				navHeight	= header.offsetHeight,
 				bodyRect	= el_body.getBoundingClientRect(),
 				scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 100,
 				scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
 			if (window.matchMedia("(min-width: 1024px)").matches){
-				// if scroll down is 100 or more and nav-is-stuck class doesn't exist
-				if ( _scrollTop > scrollValFix && !classFound ) {
+				
+				if (wScrollTop > scrollValFix && !classFound && wScrollTop < lastScroll ) {
 					el_html.className = el_html.className + ' nav-is-stuck';
 				}
-
+				
 				// if nav-is-stuck class exists
-				if ( _scrollTop <= 2 && classFound ) {
+				if ( (classFound &&  wScrollTop > lastScroll) || w.pageYOffset == 0) {
 					el_html.className = el_html.className.replace( regexp, '' );
-				}
+				}				
 			}	
 		},
 	
-		miniSiteMenuIsStuck = function(triggerElement) {
+		miniSiteMenuIsStuck = function(triggerElement, wScrollTop, MinilastScroll) {
 
-			var _scrollTop	= w.pageYOffset || el_body.scrollTop,
-				regexp		= /(nav\-is\-Substuck)/i,
+			var regexp		= /(nav\-is\-Substuck)/i,
 				classFound	= el_html.className.match( regexp ),
 				navHeight	= header_miniSite.offsetHeight,
 				bodyRect	= el_body.getBoundingClientRect(),
@@ -38,13 +37,13 @@ $(document).ready(function(){
 				scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
 			if (d.getElementsByClassName('in-minisite-in-portal') || d.getElementsByClassName('in-minisite-out-portal') && window.matchMedia("(min-width: 1024px)").matches) {
 				
-                // if scroll down is 100 or more and nav-is-Substuck class doesn't exist
-				if ( _scrollTop > scrollValFix && !classFound ) {
+               
+				if (wScrollTop > scrollValFix && !classFound && wScrollTop < MinilastScroll) {
 					el_html.className = el_html.className + ' nav-is-Substuck';
 				}
 
 				// if nav-is-Substuck class exists
-				if ( _scrollTop <= 2 && classFound ) {
+				if ( (classFound && wScrollTop > MinilastScroll) || w.pageYOffset == 0) {
 					el_html.className = el_html.className.replace( regexp, '' );
 				}
             }
@@ -53,10 +52,14 @@ $(document).ready(function(){
 
 		onScrolling = function() {
 			// this function fires menuIsStuck()…
+		var wScrollTop = w.pageYOffset || el_body.scrollTop;
+		
 			if (header != null) {			
-				menuIsStuck( d.getElementById('header') );
+				menuIsStuck( d.getElementById('header'), wScrollTop, lastScroll );
+				lastScroll = wScrollTop;
 			}
-			miniSiteMenuIsStuck( d.getElementById('header_miniSite') );
+			miniSiteMenuIsStuck( d.getElementById('header_miniSite'), wScrollTop, MinilastScroll );
+			MinilastScroll = wScrollTop;
 		};
 		
 
