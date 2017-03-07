@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.11 (unreleased)
+0.1.11 (2017-03-07)
 -------------------
 
-- Nothing changed yet.
+- change order sticky navigation.
+  [mgennart]
 
 
 0.1.10 (2017-01-25)
