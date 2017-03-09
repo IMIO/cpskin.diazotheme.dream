@@ -757,7 +757,7 @@ div#mobile-first-level-wrapper,
 }
 
 .nav-is-stuck.nav-is-Substuck #container-minisite-globalnav{
-    top:2em;
+    top:60px;
 }
 
 .nav-is-stuck #top-navigation{
