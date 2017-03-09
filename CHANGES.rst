@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.12 (unreleased)
+0.1.12 (2017-03-09)
 -------------------
 
-- Nothing changed yet.
+- change sticky navigation for mini site
+  [mgennart]  
 
 
 0.1.11 (2017-03-07)
