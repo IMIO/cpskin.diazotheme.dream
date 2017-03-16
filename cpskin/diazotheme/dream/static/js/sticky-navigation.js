@@ -36,18 +36,20 @@ $(document).ready(function(){
 					bodyRect	= el_body.getBoundingClientRect(),
 					scrollValue	= triggerElement ? triggerElement.getBoundingClientRect().top - bodyRect.top - navHeight  : 100,
 					scrollValFix = classFound ? scrollValue : scrollValue + navHeight;
-				if (d.getElementsByClassName('in-minisite-in-portal') || d.getElementsByClassName('in-minisite-out-portal') && window.matchMedia("(min-width: 1024px)").matches) {
+					if (window.matchMedia("(min-width: 1024px)").matches) {
+                        if ( d.getElementsByClassName('in-minisite-in-portal') || d.getElementsByClassName('in-minisite-out-portal') ) {
 					
-				   
-					if (wScrollTop > scrollValFix && !classFound && wScrollTop < MinilastScroll) {
-						el_html.className = el_html.className + ' nav-is-Substuck';
-					}
-	
-					// if nav-is-Substuck class exists
-					if ( (classFound && wScrollTop > MinilastScroll) || w.pageYOffset == 0) {
-						el_html.className = el_html.className.replace( regexp, '' );
-					}
-				}
+							if (wScrollTop > scrollValFix && !classFound && wScrollTop < MinilastScroll) {
+								el_html.className = el_html.className + ' nav-is-Substuck';
+							}
+			
+							// if nav-is-Substuck class exists
+							if ( (classFound && wScrollTop > MinilastScroll) || w.pageYOffset == 0) {
+								el_html.className = el_html.className.replace( regexp, '' );
+							}
+						}
+                    }
+				
 				
 			}
         };
