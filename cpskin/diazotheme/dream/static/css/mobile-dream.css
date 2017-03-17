@@ -134,6 +134,16 @@
         margin-top: 0.5em;
     }
     
+    /*  MINI SITE   */
+    
+    .in-minisite-out-portal #cpskin-banner #portal-searchbox{
+        width: 100%;
+        top: 37%;
+    }
+    
+    .in-minisite-out-portal .LSBox #searchGadget{
+        height: 7px;
+    }
 }
 
 /* FOR DEVICES WITH NARROW DESKTOP */

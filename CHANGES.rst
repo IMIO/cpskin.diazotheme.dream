@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-0.1.14 (unreleased)
+0.1.14 (2017-03-17)
 -------------------
 
-- Nothing changed yet.
+- change search box for mini site out portal
+  [mgennart]
 
 
 0.1.13 (2017-03-16)
