@@ -1,5 +1,6 @@
 body #visual-portal-wrapper{
     overflow: hidden;
+    z-index: 0;
 }
 
 .hiddenStructure{
@@ -236,13 +237,6 @@ a.btn-search {
     background-color: transparent;
 }
 
-#portal-globalnav li a:hover::after,
-#portal-globalnav li a.activated::after,
-#minisite-globalnav a:hover::after,
-#minisite-globalnav .selected a::after{
-    width: 100%;
-}
-
 #portal-globalnav li a::after,
 #minisite-globalnav a::after{
     background: transparent none repeat scroll 0 0;
@@ -334,10 +328,6 @@ li.sfHover > span > a{
     top: 0;
     transition: width 0.2s ease-in-out 0s;
     width: 0;
-}
-
-.portal-globalnav-cpskinmenu a:hover::before{
-    width: 100%;
 }
 
 .portal-globalnav-cpskinmenu.navTreeLevel0::before,
@@ -795,3 +785,4 @@ div#mobile-first-level-wrapper,
 .nav-is-stuck #hidden-search {
     position: relative;
 }
+
