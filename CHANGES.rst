@@ -5,6 +5,9 @@ Changelog
 0.1.16 (unreleased)
 -------------------
 
+- Split media queries into different LESS files
+  [laulaz]
+
 - Complete migration to LESS
   [laulaz]
 
