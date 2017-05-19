@@ -5,7 +5,8 @@ Changelog
 0.1.16 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Complete migration to LESS
+  [laulaz]
 
 
 0.1.15 (2017-03-23)
