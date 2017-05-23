@@ -5,6 +5,9 @@ Changelog
 0.1.16 (unreleased)
 -------------------
 
+- Ensure cpskin.theme is migrated to LESS before migrating this theme
+  [laulaz]
+
 - Split media queries into different LESS files
   [laulaz]
 
