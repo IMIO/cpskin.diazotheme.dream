@@ -5,7 +5,8 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Override @nav-onglet-bg-hover variable for dream themes
+  [laulaz]
 
 
 0.2 (2017-05-29)
