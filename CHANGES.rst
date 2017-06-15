@@ -5,6 +5,9 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
+- I deleted mobile-wide css to retrieve it in styles.less
+  [maud]
+
 - Override @nav-onglet-bg-hover variable for dream themes
   [laulaz]
 
