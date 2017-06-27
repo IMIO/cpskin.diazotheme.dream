@@ -5,7 +5,8 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add missing rules for right actions panel : #17748
+  [laulaz]
 
 
 0.2.1 (2017-06-15)
