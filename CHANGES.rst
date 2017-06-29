@@ -5,6 +5,9 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
+- Use first H1 even if it has no documentFirstHeading class : #17207
+  [laulaz]
+
 - Add missing rules for right actions panel : #17748
   [laulaz]
 
