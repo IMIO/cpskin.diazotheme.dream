@@ -28,7 +28,7 @@
   </replace>
 
   <rules css:if-content="h1">
-      <replace css:content="//h1[1]">
+      <replace content="//h1[1]">
           <header>
               <xsl:copy-of select="."/>
               <xsl:copy-of select="../div/div[@id='plone-document-byline']" />
