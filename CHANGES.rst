@@ -5,6 +5,9 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
+- Add new annuaire.xml rules coming from cpskin.theme : #17751
+  [laulaz]
+
 - Use first H1 even if it has no documentFirstHeading class : #17207
   [laulaz]
 
