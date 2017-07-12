@@ -22,12 +22,6 @@
     <!-- Theme -->
     <plone:static directory="static" name="cpskin.diazotheme.dream" type="theme" />
 
-    <cmf:registerDirectory
-        name="skins"
-        directory="skins"
-        recursive="True"
-        />
-
     <!-- Overrides -->
     <include package="z3c.jbot" file="meta.zcml" />
     <browser:jbot directory="static/overrides" />

@@ -5,6 +5,9 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
+- Remove unused skin.
+  [bsuttor]
+
 - Add new annuaire.xml rules coming from cpskin.theme : #17751
   [laulaz]
 
@@ -63,7 +66,7 @@ Changelog
 -------------------
 
 - change sticky navigation for mini site
-  [mgennart]  
+  [mgennart]
 
 
 0.1.11 (2017-03-07)
