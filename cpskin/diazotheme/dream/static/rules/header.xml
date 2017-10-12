@@ -112,7 +112,7 @@
   
     
     <!-- Logo to minisite horizontal navigation and minisite action-->
-    <rules if="$ms_horizontal_navigation">
+    <rules if="$ms_horizontal_navigation_any_mode">
         <before css:content-children="#container-minisite-globalnav">
             <xsl:copy-of select="//*[@id='minisite-actions']" />
             <div id="minisite-navigation-inner">
