@@ -654,6 +654,9 @@ div#mobile-first-level-wrapper,
 #container-minisite-globalnav [id="minisite-actions"] + #minisite-globalnav {
     display:block;
 }
+#minisite-globalnav{
+    background: transparent;
+}
 #minisite-globalnav a {
     color: white;
     display: inline-block;
@@ -664,7 +667,8 @@ div#mobile-first-level-wrapper,
     display: none;
 }
 
-[id="minisite-navigation-inner"] {
+#minisite-navigation-inner {
+    background: transparent;
     clear:right;
     margin: 0 auto;
     max-width: 1920px;
@@ -768,7 +772,9 @@ div#mobile-first-level-wrapper,
 .nav-is-stuck.nav-is-Substuck #container-minisite-globalnav{
     top:60px;
 }
-
+.nav-is-stuck [id="minisite-navigation-inner"] #minisite-logo{
+    position: fixed;
+}
 .nav-is-stuck #top-navigation{
     top: 0;
 }
