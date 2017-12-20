@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.2.4 (unreleased)
+0.2.4 (2017-12-20)
 ------------------
 
-- Nothing changed yet.
-
+- Change order to sticky navigation and delete css to bigimage.
+  [mgennart]
 
 0.2.3 (2017-10-12)
 ------------------
