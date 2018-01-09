@@ -54,6 +54,7 @@
                 <xsl:apply-templates select="./*[@id='portal-globalnav']" />
                 <div id="languages-tools">
                     <div id="languages-tools-inner">
+                        <xsl:copy-of select="./*[@id='top-menu-actions']" />
                         <div id="div-siteactions">
                                 <xsl:copy-of select="//*[@id='portal-siteactions']" />
                         </div>
@@ -109,6 +110,7 @@
   <drop css:content="#portal-siteactions" />
   <drop css:content="#minisite-globalnav" />
   <drop css:content="#portal-breadcrumbs" />
+  <drop css:content="#top-menu-actions" />
   
     
     <!-- Logo to minisite horizontal navigation and minisite action-->
