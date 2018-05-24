@@ -44,15 +44,14 @@ body #visual-portal-wrapper{
     width: 24%;
     z-index: 1;
 }
-
-#portal-searchbox form {
+.LSBox{
+    background: transparent;
+}
+.LSBox #searchGadget{
     background: #fff;
     border-radius: 4px;
-}
-
-.LSBox #searchGadget{
-    border-radius: 4px 0 0 4px;
-    width: 21em;
+    padding-left: 1.5em;
+    width: 84%;
 }
 
 .LSBox input:focus{
@@ -261,20 +260,31 @@ a.btn-search {
     transition: width 0.2s ease-in-out 0s;
     width: 0;
 }
-
+#portal-globalnav li.selected a::after{
+    border-bottom: 2px dotted #fff;
+    transition: width 0.2s ease-in-out 0s;
+}
+#portal-globalnav li.selected a:hover::after{
+     border-bottom: 2px solid #fff;
+}
+#portal-globalnav li a:hover::after,
+#portal-globalnav li a.activated::after,
+#portal-globalnav li.selected a::after,
+#minisite-globalnav a:hover::after,
+#minisite-globalnav .selected a::after {
+    width: 100%;
+}
+#visual-portal-wrapper a:focus{
+    outline: none;
+}
+#portal-globalnav .selected a:hover{
+    color:#fff;
+}
 .sf-with-ul::after{
     content: " ⌟";
     float: right;
     margin: -0.3em 0 0 0.5em;
     transform: rotate(45deg);
-}
-
-#visual-portal-wrapper a:focus{
-    outline: none;
-}
-
-#portal-globalnav .selected a:hover{
-    color:#fff;
 }
 
 /*   Je suis je trouve and search   */
@@ -315,7 +325,51 @@ li.sfHover > span > a{
     background:transparent;
     color:#fff;
 }
-
+.portal-globalnav-cpskinmenu a::before,
+.portal-globalnav-cpskinmenu-tabs a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
+.portal-globalnav-cpskinmenu a:hover::before,
+.portal-globalnav-cpskinmenu-tabs a:hover::before{
+    width: 100%;
+}
+li.sfHover > span > a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.portal-globalnav-cpskinmenu.navTreeLevel0 .navTreeItemInPath > span a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px dotted #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.portal-globalnav-cpskinmenu.navTreeLevel0 .navTreeItemInPath > span a:hover::before{
+    border-bottom-style: solid;
+}
 .portal-globalnav-cpskinmenu .selected a,
 .portal-globalnav-cpskinmenu-tabs .selected a,
 .portal-globalnav-cpskinmenu .navTreeItemInPath > span a {
@@ -331,19 +385,6 @@ li.sfHover > span > a{
     position: relative;
 }
 
-.portal-globalnav-cpskinmenu a::before{
-    background: transparent none repeat scroll 0 0;
-    border-bottom: 2px solid #fff;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: width 0.2s ease-in-out 0s;
-    width: 0;
-}
 
 .portal-globalnav-cpskinmenu.navTreeLevel0::before,
 .portal-globalnav-cpskinmenu.navTreeLevel0::after,

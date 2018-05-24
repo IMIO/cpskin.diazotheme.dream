@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-0.2.6 (unreleased)
+0.2.6 (2018-05-24)
 ------------------
 
-- Nothing changed yet.
-
+- Change css for search and navigation.
+  [mgennart]
 
 0.2.5 (2018-01-09)
 ------------------
