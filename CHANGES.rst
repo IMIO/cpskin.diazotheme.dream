@@ -5,7 +5,8 @@ Changelog
 0.2.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change rules to use new options for search position : #21303
+  [laulaz]
 
 
 0.2.6 (2018-05-24)
