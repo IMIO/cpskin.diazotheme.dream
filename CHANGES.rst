@@ -5,6 +5,9 @@ Changelog
 0.2.7 (unreleased)
 ------------------
 
+- Add uninstall profile
+  [laulaz]
+
 - Change rules to use new options for search position : #21303
   [laulaz]
   
