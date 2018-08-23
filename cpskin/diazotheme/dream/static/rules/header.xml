@@ -93,7 +93,7 @@
       </replace>
       <after css:content="#portal-globalnav li:last-child">
          <xsl:if test="$is_search_in_navigation">
-            <li>
+            <li id="portaltab-search">
                  <a href="#"  class="btn-search">
                     <span class="ico-search"></span>
                     <span>Chercher</span>
