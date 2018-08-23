@@ -65,11 +65,6 @@
                                 <span>Chercher</span>
                             </a>
                           </div>
-                          <div id="hidden-search" style="display:none;">
-                            <div id="portal-searchbox-action">
-                              <xsl:copy-of select="./*[@id='portal-searchbox']/*"/>
-                            </div>
-                          </div>
                         </xsl:if>
                         <xsl:copy-of select="./*[@id='portal-personaltools-wrapper']" />
                         <xsl:copy-of select="./*[@id='portal-languageselector']" />
@@ -85,11 +80,9 @@
                                                             and @id!='messagesviewlet')]"/>
             </div>
           </div>
-          <xsl:if test="$is_search_in_navigation">
             <div id="hidden-search" style="display:none;">
               <xsl:copy-of select="./*[@id='portal-searchbox']"/>
-            </div>
-          </xsl:if>
+            </div>   
       </replace>
       <after css:content="#portal-globalnav li:last-child">
          <xsl:if test="$is_search_in_navigation">

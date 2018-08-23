@@ -7,7 +7,9 @@ Changelog
 
 - Change rules to use new options for search position : #21303
   [laulaz]
-
+  
+-Change css for search.
+ [mgennart]
 
 0.2.6 (2018-05-24)
 ------------------
