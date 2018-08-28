@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2.8 (unreleased)
+0.2.8 (2018-08-28)
 ------------------
 
 - Fix useless preventDefault (superfish does the work)
