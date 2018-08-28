@@ -5,7 +5,8 @@ Changelog
 0.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix useless preventDefault (superfish does the work)
+  [laulaz]
 
 
 0.2.7 (2018-08-27)

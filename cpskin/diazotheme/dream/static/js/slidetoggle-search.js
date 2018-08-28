@@ -12,6 +12,5 @@ $( document ).ready(function() {
        
        $("#portal-globalnav a[tabindex]").click(function(){
         $("#hidden-search").hide('fast');
-         e.preventDefault();
        });
 });
