@@ -62,7 +62,8 @@
                           <div id="search-action">
                             <a href="#" class="btn-search">
                                 <span class="ico-search"></span>
-                                <span>Chercher</span>
+                                <xsl:apply-templates select="document('/@@theme-fragment/search')/*"
+                                                     mode="raw"/>
                             </a>
                           </div>
                         </xsl:if>
@@ -89,7 +90,8 @@
             <li id="portaltab-search">
                  <a href="#"  class="btn-search">
                     <span class="ico-search"></span>
-                    <span>Chercher</span>
+                    <xsl:apply-templates select="document('/@@theme-fragment/search')/*"
+                                         mode="raw"/>
                 </a>
             </li>             
          </xsl:if>
@@ -106,7 +108,8 @@
             <li class="visible-search">
                  <a href="#"  class="btn-search">
                     <span class="ico-search"></span>
-                    <span>Chercher</span>
+                    <xsl:apply-templates select="document('/@@theme-fragment/search')/*"
+                                         mode="raw"/>
                 </a>
             </li>             
          </xsl:if>
