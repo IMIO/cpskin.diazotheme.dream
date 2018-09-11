@@ -8,11 +8,13 @@ body #visual-portal-wrapper{
 }
 
 /*   HEADER   */
-
+#top-actions{
+    background: @action-bg;
+}
 /*logo*/
 
 [id="top-logo"] {
-    background: #3f5765;
+    background: @nav-theme;
     display: table-cell;
     vertical-align: middle;
     width: 15%;
@@ -155,7 +157,7 @@ a.btn-search {
 
 
 #top-navigation-inner::after {
-    background: #4e6674 none repeat scroll 0 0;
+    background: @nav-action;
     bottom: 0;
     content: " ";
     display: block;
@@ -226,7 +228,7 @@ a.btn-search {
 /*   NAVIGATION   */
 
 [id="top-navigation"]{
-    background: #3f5765;
+    background: @nav-theme;
 }
 
 #top-navigation-inner{
@@ -304,8 +306,13 @@ a.btn-search {
 #visual-portal-wrapper a:focus{
     outline: none;
 }
+#portal-globalnav .selected a,
+#portal-globalnav li a.activated{
+    color: @nav-color;
+}
+#portal-globalnav a:hover,
 #portal-globalnav .selected a:hover{
-    color:#fff;
+    color: @nav-color-hover;
 }
 .sf-with-ul::after{
     content: " ⌟";
@@ -337,15 +344,22 @@ a.btn-search {
 /*   sub menu   */
 
 .portal-globalnav-cpskinmenu.navTreeLevel0 {
-    background: rgba(63, 87, 101, 0.8);
+    background: @nav-level-0;
     margin:0;
     position: absolute;
     top:100%;
     width: 100%;
     left:50%;
     transform: translateX(-50%); /*permets de laisser la position absolute et de centre par rapport au menu*/
+    &:before{
+        background: @nav-level-0;
+        right: 100%;
+    }
+    &:after{
+        background: @nav-level-0;
+        left: 100%;
+    }
 }
-
 .portal-globalnav-cpskinmenu a:hover,
 .portal-globalnav-cpskinmenu-tabs a:hover,
 li.sfHover > span > a{
@@ -428,30 +442,20 @@ li.sfHover > span > a::before{
     bottom:0;
 }
 
-.portal-globalnav-cpskinmenu.navTreeLevel0::before{
-    background: rgba(63, 87, 101 ,0.8);
-    right: 100%;
-}
-
-.portal-globalnav-cpskinmenu.navTreeLevel0::after{
-    background: rgba(63, 87, 101, 0.8);
-    left: 100%;
-}
-
 .portal-globalnav-cpskinmenu.no_direct_access::before,
 .portal-globalnav-cpskinmenu.has_direct_access::before{
-    background: rgba(106, 118, 124, 0.8);
+    background: @nav-level-1;
     right: 100%;
 }
 
 .portal-globalnav-cpskinmenu.no_direct_access::after,
 .portal-globalnav-cpskinmenu.has_direct_access::after{
-    background: rgba(106, 118, 124, 0.8);
+    background: @nav-level-1;
     left: 100%;
 }
 
 .sf-menu ul.portal-globalnav-cpskinmenu.navTreeLevel1{
-    background: rgba(106, 118, 124, 0.8) !important;
+    background: @nav-level-1 !important;
 }
 
 ul.portal-globalnav-cpskinmenu li a{
@@ -466,11 +470,30 @@ li.sfHover > span > a{
 }
 
 .sf-menu ul.navTreeLevel1{
-    background: rgba(63, 87, 101, 0.8) !important;
     box-shadow: none;
     margin-top: 0;   
 }
-
+.sf-menu ul.navTreeLevel2 {
+    background: @nav-level-2 !important;
+    &:before{
+        background: @nav-level-2;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    &:after{
+        background: @nav-level-2;
+        content: "";
+        position: absolute;
+        top:0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+    }
+}
 /*acces direct*/
 
 .sf-menu ul.navTreeLevel1.direct_access {
@@ -645,7 +668,7 @@ li.bloc-item span{
 
 #portal-footer-wrapper .row,
 #portal-footer{
-    background-color: #3f5765;
+    background: @footer-bg;
 }
 
 #footer-sitemap a,
@@ -682,13 +705,13 @@ li.bloc-item span{
 /*   menu mobile   */
 
 #mobnav-btn{
-    background: #3f5765;
+    background: @nav-theme;
     clear:left;
 }
 
 div#mobile-first-level-wrapper,
 .advb-submenu .advb-title{
-    background-color: #3f5765;
+    background-color: @nav-theme;
 }
 
 .advb-submenu {
