@@ -7,8 +7,16 @@ Changelog
 
 - Use fragment to get "Search" translation
   [laulaz]
-
-
+  
+- Delete selected to menu.
+  [mgennart]
+  
+- Change opacity for submenu.
+  [mgennart]
+  
+- Add css for menu level 4.
+  [mgennart]
+  
 0.2.8 (2018-08-28)
 ------------------
 

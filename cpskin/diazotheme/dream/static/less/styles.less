@@ -265,12 +265,9 @@ a.btn-search {
 #portal-globalnav li a:hover,
 #portal-globalnav li a:active,
 #portal-globalnav .activated,
-#portal-globalnav .selected a,
 #portal-globalnav .selected a:hover,
 #navWrapper #portal-globalnav #portaltab-je-suis a,
 #navWrapper #portal-globalnav #portaltab-je-trouve a,
-#navWrapper #portal-globalnav #portaltab-je-suis .selected a,
-#navWrapper #portal-globalnav #portaltab-je-trouve .selected a,
 #navWrapper #portal-globalnav #portaltab-je-suis a:hover,
 #navWrapper #portal-globalnav #portaltab-je-trouve a:hover,
 #navWrapper #portal-globalnav #portaltab-je-suis .activated,
@@ -287,25 +284,15 @@ a.btn-search {
     transition: width 0.2s ease-in-out 0s;
     width: 0;
 }
-#portal-globalnav li.selected a::after{
-    border-bottom: 2px dotted #fff;
-    transition: width 0.2s ease-in-out 0s;
-}
-#portal-globalnav li.selected a:hover::after{
-     border-bottom: 2px solid #fff;
-}
+
 #portal-globalnav li a:hover::after,
 #portal-globalnav li a.activated::after,
-#portal-globalnav li.selected a::after,
 #minisite-globalnav a:hover::after,
-#minisite-globalnav .selected a::after {
+#portal-globalnav .menu-activated .activated::after{
     width: 100%;
 }
 #visual-portal-wrapper a:focus{
     outline: none;
-}
-#portal-globalnav .selected a:hover{
-    color:#fff;
 }
 .sf-with-ul::after{
     content: " ⌟";
@@ -337,7 +324,7 @@ a.btn-search {
 /*   sub menu   */
 
 .portal-globalnav-cpskinmenu.navTreeLevel0 {
-    background: rgba(63, 87, 101, 0.8);
+    background: rgba(63, 87, 101, 0.95);
     margin:0;
     position: absolute;
     top:100%;
@@ -351,20 +338,6 @@ a.btn-search {
 li.sfHover > span > a{
     background:transparent;
     color:#fff;
-}
-.portal-globalnav-cpskinmenu a::before,
-.portal-globalnav-cpskinmenu-tabs a::before{
-    background: transparent none repeat scroll 0 0;
-    border-bottom: 2px solid #fff;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: width 0.2s ease-in-out 0s;
-    width: 0;
 }
 .portal-globalnav-cpskinmenu a:hover::before,
 .portal-globalnav-cpskinmenu-tabs a:hover::before{
@@ -382,17 +355,19 @@ li.sfHover > span > a::before{
     top: 0;
     width: 100%;
 }
-.portal-globalnav-cpskinmenu.navTreeLevel0 .navTreeItemInPath > span a::before{
+.portal-globalnav-cpskinmenu a::before,
+.portal-globalnav-cpskinmenu-tabs a::before{
     background: transparent none repeat scroll 0 0;
-    border-bottom: 2px dotted #fff;
+    border-bottom: 2px solid #fff;
     bottom: 0;
     content: "";
     display: block;
     height: 100%;
     left: 0;
     position: absolute;
+    transition: width 0.2s ease-in-out 0s;
     top: 0;
-    width: 100%;
+    width: 0%;
 }
 .portal-globalnav-cpskinmenu.navTreeLevel0 .navTreeItemInPath > span a:hover::before{
     border-bottom-style: solid;
@@ -401,11 +376,6 @@ li.sfHover > span > a::before{
 .portal-globalnav-cpskinmenu-tabs .selected a,
 .portal-globalnav-cpskinmenu .navTreeItemInPath > span a {
     text-decoration: none;
-}
-
-.portal-globalnav-cpskinmenu .selected a,
-.portal-globalnav-cpskinmenu-tabs .selected a{
-    border-bottom: 2px dotted #fff;
 }
 
 .portal-globalnav-cpskinmenu a{
@@ -429,29 +399,29 @@ li.sfHover > span > a::before{
 }
 
 .portal-globalnav-cpskinmenu.navTreeLevel0::before{
-    background: rgba(63, 87, 101 ,0.8);
+    background: rgba(63, 87, 101 ,0.95);
     right: 100%;
 }
 
 .portal-globalnav-cpskinmenu.navTreeLevel0::after{
-    background: rgba(63, 87, 101, 0.8);
+    background: rgba(63, 87, 101, 0.95);
     left: 100%;
 }
 
 .portal-globalnav-cpskinmenu.no_direct_access::before,
 .portal-globalnav-cpskinmenu.has_direct_access::before{
-    background: rgba(106, 118, 124, 0.8);
+    background: rgba(106, 118, 124, 0.95);
     right: 100%;
 }
 
 .portal-globalnav-cpskinmenu.no_direct_access::after,
 .portal-globalnav-cpskinmenu.has_direct_access::after{
-    background: rgba(106, 118, 124, 0.8);
+    background: rgba(106, 118, 124, 0.95);
     left: 100%;
 }
 
 .sf-menu ul.portal-globalnav-cpskinmenu.navTreeLevel1{
-    background: rgba(106, 118, 124, 0.8) !important;
+    background: rgba(106, 118, 124, 0.95) !important;
 }
 
 ul.portal-globalnav-cpskinmenu li a{
@@ -466,15 +436,46 @@ li.sfHover > span > a{
 }
 
 .sf-menu ul.navTreeLevel1{
-    background: rgba(63, 87, 101, 0.8) !important;
+    background: rgba(63, 87, 101, 0.95) !important;
     box-shadow: none;
     margin-top: 0;   
 }
-
+.sf-menu ul.portal-globalnav-cpskinmenu.navTreeLevel1.has_direct_access a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 2px solid #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
+.sf-menu ul.portal-globalnav-cpskinmenu.navTreeLevel1.has_direct_access a:hover::before{
+    width: 100%;
+}
+.sf-menu ul.navTreeLevel1.direct_access a::before{
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 0px solid #fff;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.2s ease-in-out 0s;
+    width: 0;
+}
+.sf-menu ul.navTreeLevel1.direct_access a:hover::before{
+    width: 100%;
+    border-bottom: 2px solid #fff;
+}
 /*acces direct*/
 
 .sf-menu ul.navTreeLevel1.direct_access {
-    background: rgba(255, 255, 255, 0) !important;
+    background: transparent !important;
 }
 .sf-menu .direct_access li a {
     padding-left: 1.2em !important;
@@ -486,14 +487,33 @@ li.sfHover > span > a{
     display: inline;
 }
 
-.sf-menu .direct_access li a:hover::before{
-    border-bottom: 2px solid #fff;
-}
-
 .sf-menu .direct_access li a::after{
     content: "";
 }
 
+.sf-menu ul.navTreeLevel2{
+    margin: 1em 0 0 0;
+    a{
+        color: #333;
+    }
+    &:before,
+    &:after{
+        background: #fff;
+        display: block;
+        width: 1000px;
+        content: "";
+        position: absolute;
+        height: 100%;
+        top:0;
+        bottom:0;
+    }
+    &:before{
+        right: 100%;
+    }
+    &:after{
+        left: 100%;
+    }
+}
 
 /*   BANNER   */
 
@@ -515,7 +535,8 @@ li.sfHover > span > a{
 }
 
 .titre-rss h2,
-#content a.bloc-rss{
+#content a.bloc-rss,
+.rss-title h2{
     color:#2980b9;
 }
 
