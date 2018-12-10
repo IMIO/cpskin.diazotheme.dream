@@ -43,7 +43,7 @@
   <!-- Standard Header / banner -->
   <rules if-not="$isinminisitemode">
       <replace css:content-children="#portal-header">
-          <div id="top-navigation">
+          <div id="top-navigation" class="minisite-collapsable">
             <div id="top-navigation-inner">
                 <div id="top-logo">
                     <div id="top-logo-inner">

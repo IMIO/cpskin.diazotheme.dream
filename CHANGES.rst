@@ -5,6 +5,9 @@ Changelog
 0.2.9 (unreleased)
 ------------------
 
+- Add class for collapsable minisite menu : WEB-2865
+  [mgennart]
+
 - Use fragment to get "Search" translation
   [laulaz]
   
