@@ -5,6 +5,9 @@ Changelog
 0.2.9 (unreleased)
 ------------------
 
+- Add rules for top slider : WEB-2407
+  [mgennart]
+
 - Add class for collapsable minisite menu : WEB-2865
   [mgennart]
 

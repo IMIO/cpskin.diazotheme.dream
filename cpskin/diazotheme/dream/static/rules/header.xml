@@ -14,6 +14,10 @@
         <xsl:copy-of select="//*[@id='portal-breadcrumbs']" />
     </div>
   </after>
+  <after css:content="#portal-top">
+    <xsl:copy-of select="//div[contains(@class, 'slider-top')]" />
+  </after>
+  <drop css:content="#accueil .slider-top" />
   <!-- Header / banner specific to minisite mode -->
   <rules if="$isinminisitemode">
       <replace css:content-children="#portal-header">
