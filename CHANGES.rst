@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2.9 (unreleased)
+0.2.9 (2019-01-08)
 ------------------
 
 - Add rules for top slider : WEB-2407
