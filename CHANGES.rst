@@ -5,7 +5,8 @@ Changelog
 0.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Remove useless override : language menu is now in cpskin.theme : WEB-2888
+  [laulaz]
 
 
 0.2.9 (2019-01-08)

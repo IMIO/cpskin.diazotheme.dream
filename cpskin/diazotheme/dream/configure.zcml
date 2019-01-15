@@ -31,10 +31,6 @@
     <!-- Theme -->
     <plone:static directory="static" name="cpskin.diazotheme.dream" type="theme" />
 
-    <!-- Overrides -->
-    <include package="z3c.jbot" file="meta.zcml" />
-    <browser:jbot directory="static/overrides" />
-
     <!-- Upgrades -->
     <genericsetup:upgradeStep
         title="cpskin.diazotheme.dream theme: upgrade to LESS (v0002)"
