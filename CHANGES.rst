@@ -5,8 +5,8 @@ Changelog
 0.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Change css for #portal-top #cpskin-banner.
+  [mgennart]
 
 0.2.9 (2019-01-08)
 ------------------
