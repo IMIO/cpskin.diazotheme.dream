@@ -2,8 +2,11 @@ Changelog
 =========
 
 
-0.2.10 (unreleased)
+0.2.10 (2019-03-04)
 -------------------
+
+- Add dropdown menu for mini site : WEB-2928
+  [mgennart]
 
 - Change css for #portal-top #cpskin-banner.
   [mgennart]
