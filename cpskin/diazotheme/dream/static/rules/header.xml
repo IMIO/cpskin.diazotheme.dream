@@ -142,7 +142,7 @@
         </before>
         <drop css:content="#minisite-logo" />
         <drop css:content="#minisite-actions" />
-        <drop css:content=".minisite-dropdown-menu-container" />
+        <drop css:content=".minisite-dropdown-menu" />
     </rules>
   
 </rules>
