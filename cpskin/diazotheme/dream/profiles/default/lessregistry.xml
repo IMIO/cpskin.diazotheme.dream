@@ -33,7 +33,7 @@
 
  <stylesheet title="cpskin.diazotheme.dream LESS Medium Mobile Styles"
     id="++theme++cpskin.diazotheme.dream/less/mobilemedium.less"
-    media="handheld, screen and (max-device-width: 768px), screen and (max-width: 768px)"
+    media="handheld, screen and (min-device-width: 481px) and (max-device-width: 768px), screen and(min-width: 481px) and (max-width: 768px)"
     enabled="1"
     rendering="link"
     applyPrefix="True"
@@ -43,7 +43,7 @@
 
  <stylesheet title="cpskin.diazotheme.dream LESS Large Mobile Styles"
     id="++theme++cpskin.diazotheme.dream/less/mobilelarge.less"
-    media="handheld, screen and (max-device-width: 1024px), screen and (max-width: 1024px)"
+    media="handheld, screen and (min-device-width: 769px) and (max-device-width: 1024px), screen and(min-width: 769px) and (max-width: 1024px)"
     enabled="1"
     rendering="link"
     applyPrefix="True"
