@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2.12 (unreleased)
+0.2.12 (2019-07-08)
 -------------------
 
 - Improve CSS media queries sizes
