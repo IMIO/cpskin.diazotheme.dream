@@ -5,7 +5,8 @@ Changelog
 0.2.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- WEB-3411: Color correction for better accessibility
+  [thomlamb]
 
 
 0.2.12 (2019-07-08)
