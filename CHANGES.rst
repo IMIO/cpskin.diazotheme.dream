@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.2.14 (unreleased)
+0.2.14 (2022-01-20)
 -------------------
 
 - Add cookies consent viewlet in minisite mode (in Diazo rules)
