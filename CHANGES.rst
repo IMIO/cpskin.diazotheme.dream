@@ -5,7 +5,8 @@ Changelog
 0.2.15 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Revert last release to handle cookies consent viewlet in cpskin.core directly
+  [laulaz]
 
 
 0.2.14 (2022-01-20)
